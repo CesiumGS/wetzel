@@ -16,5 +16,5 @@ var inputPath = argv._[0];
 var schema = JSON.parse(fs.readFileSync(inputPath));
 
 process.stdout.write(generateMarkdown({
-	schema : schema
+    schema : schema
 }));
