@@ -12,9 +12,10 @@ if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
     return;
 }
 
-var inputPath = argv._[0];
-var schema = JSON.parse(fs.readFileSync(inputPath));
+var filename = argv._[0];
+var schema = JSON.parse(fs.readFileSync(filename));
 
 process.stdout.write(generateMarkdown({
-    schema : schema
+    schema : schema,
+    basePath : path.dirname(filename)
 }));
