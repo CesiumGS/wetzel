@@ -2,7 +2,7 @@
 
 Generate Markdown documentation from JSON Schema
 
-It is useful to redirect the output to the clipboard and then paste into a temporary GitHub issue for testing.
+It is useful to pipe the Markdown output to the clipboard and then paste into a temporary GitHub issue for testing.
 
 On Mac:
 ```
