@@ -2,7 +2,14 @@
 
 Generate Markdown documentation from JSON Schema
 
-For example, this JSON Schema:
+* [Example](#Example)
+* [Getting Started](#Getting-Started)
+* [Limitations](#Limitations)
+
+<a name="Example"></a>
+## Example
+
+This JSON Schema:
 ```json
 {
     "$schema" : "http://json-schema.org/draft-03/schema",
@@ -30,7 +37,6 @@ For example, this JSON Schema:
 is used to generate this Markdown documentation:
 
 ---
-
 # example
 
 Example description.
@@ -62,6 +68,7 @@ Specifies if the elements are scalars, vectors, or matrices.
 
 ---
 
+<a name="Getting-Started"></a>
 ## Getting Started
 
 Install [Node.js](https://nodejs.org/en/) if you don't already have it, clone this repo, and then:
@@ -83,6 +90,9 @@ On Windows:
 node ./bin/wetzel.js ../glTF/specification/schema/accessor.schema.json -l 2 | clip
 ```
 
+The `-l` option specifies the starting header level.
+
+<a name="Limitations"></a>
 ## Limitations
 
 This tool was developed to generate reference documentaiton for the [glTF](https://github.com/KhronosGroup/glTF) schema.  As such, it currently only supports JSON Schema 3 and doesn't support the entire JSON Schema spec.  However, wetzel is easy to hack on.  Just edit [lib/generateMarkdown.js](lib/generateMarkdown.js).
