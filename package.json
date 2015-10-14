@@ -32,5 +32,8 @@
     },
     "devDependencies": {
         "jshint": "^2.6.0"
+    },
+    "jshintConfig": {
+        "node": true
     }
 }
