@@ -75,18 +75,18 @@ Install [Node.js](https://nodejs.org/en/) if you don't already have it, clone th
 cd wetzel
 npm install
 ```
-Run `node ./bin/wetzel.js` and pass it the path to a file with a JSON Schema, and the generated Markdown is output to the console.
+Run `node bin/wetzel.js` and pass it the path to a file with a JSON Schema, and the generated Markdown is output to the console.
 
 It is useful to pipe the Markdown output to the clipboard and then paste into a temporary GitHub issue for testing.
 
 On Mac:
 ```
-node ./bin/wetzel.js ../glTF/specification/schema/accessor.schema.json -l 2 | pbcopy
+node bin/wetzel.js ../glTF/specification/schema/accessor.schema.json -l 2 | pbcopy
 ```
 
 On Windows:
 ```
-node ./bin/wetzel.js ../glTF/specification/schema/accessor.schema.json -l 2 | clip
+node bin/wetzel.js ../glTF/specification/schema/accessor.schema.json -l 2 | clip
 ```
 
 The `-l` option specifies the starting header level.
