@@ -95,6 +95,7 @@ Options:
 * The `-w` option will suppress any warnings about potential documentation problems that wetzel normally prints by default.
 * The `-d` option lets you specify the root filename that will be used for writing intermediate wetzel artifacts that are useful when doing wetzel development.
 * The `-a` option will attempt to aggressively auto-link referenced type names in descriptions between each other.  If it's too agressive, you can add `=cqo` so that it only attempts to auto-link type names that are within "code-quotes only" (cqo) (e.g.: ``typeName``)
+* The `-i` option lets you specify an array of schema filenames that might be referenced by others, but shouldn't get their own documentation section.
 
 <a name="common-usage"></a>
 ## Common Usage
@@ -109,10 +110,13 @@ wetzel ../glTF/specification/2.0/schema/gltf.schema.json -l 2 -p schema/ -i "['g
 That will generate documentation for glTF.schema.json, as well as all referenced schemas,
 all in a single set of markdown with inter-type linking.  By specifying the `-p` parameter,
 you've indicated where the actual json schema files will live relative to the documentation
-so that the type documentation can directly link to the type json file.  By specifying the
-`-i` parameter, you've specified the list of schema files that should be ignored when writing
-out the top-level types.  By specifying the `-a` parameter, it will aggressively attempt to
-auto-link all referenced type names with each other.
+so that the type documentation can directly link to the type json file. By specifying the
+`-a` parameter, it will aggressively attempt to auto-link all referenced type names with each other.
+
+By specifying the `-i` property and that array of filenames, you are ensuring that there won't
+be a Table of Contents entry for those types, nor will there be individual documentation sections
+for those types (since they only exist to be referenced by other types to make type composition/authoring
+simpler and consistent).
 
 <a name="Limitations"></a>
 ## Limitations

@@ -13,6 +13,7 @@ if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
         '  -l,  --headerLevel        Top-level header. Default: 1\n' +
         '  -p,  --schemaPath         The path string that should be used when generating the schema reference paths.\n' +
         '  -a,  --autoLink           Aggressively auto-inter-link types referenced in descriptions.  Add =cqo to auto-link types that are in code-quotes only.\n' +
+        '  -i                        An array of schema filenames (no paths) that should not get their own table of contents entry, nor type listing (they are just used for sharing properties across multiple other schemas)'
         '  -d,  --debug              Provide a path, and this will save out intermediate processing artifacts useful in debugging wetzel.' +
         '  -w,  --suppressWarnings   Will not print out WETZEL_WARNING strings indicating identified conversion problems. Default: false';
     process.stdout.write(help);
@@ -33,6 +34,14 @@ switch (defaultValue(argv.a, argv.autoLink)) {
         break;
 }
 
+// We're expecting users to pass in an array as a "string", but we aren't expecting them
+// to pass it in as a correctly JSON-escaped string.  Therefore, we need to replace single
+// or double-quotes with a backslash-double-quote, and then we can parse the object.
+var ignorableTypesString = defaultValue(argv.i, '[]');
+ignorableTypesString = ignorableTypesString.replace(/'/g, '\"');
+ignorableTypesString = ignorableTypesString.replace(/"/g, '\"');
+var ignorableTypes = JSON.parse(ignorableTypesString);
+
 process.stdout.write(generateMarkdown({
     schema: schema,
     filePath: filepath,
@@ -43,4 +52,5 @@ process.stdout.write(generateMarkdown({
     debug: defaultValue(defaultValue(argv.d, argv.debug), null),
     suppressWarnings: defaultValue(defaultValue(argv.w, argv.suppressWarnings), false),
     autoLink: autoLink,
+    ignorableTypes: ignorableTypes
 }));
