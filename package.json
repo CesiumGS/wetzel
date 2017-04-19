@@ -1,39 +1,40 @@
 {
-    "name": "wetzel",
-    "version": "0.0.1",
-    "description": "Generate Markdown documentation from JSON Schema",
-    "license": "Apache-2.0",
-    "author": {
-        "name": "Patrick Cozzi",
-        "email": "pcozzi@agi.com",
-        "url": "https://twitter.com/pjcozzi"
-    },
-    "keywords": [
-        "json schema",
-        "markdown"
-    ],
-    "homepage": "https://github.com/AnalyticalGraphicsInc/wetzel",
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:AnalyticalGraphicsInc/wetzel.git"
-    },
-    "bugs": {
-        "url": "https://github.com/AnalyticalGraphicsInc/wetzel/issues"
-    },
-    "scripts": {
-        "jshint": "./node_modules/jshint/bin/jshint *.js **/*.js --exclude build/**/*.js"
-    },
-    "directories": {
-        "bin": "./bin",
-        "lib": "./lib"
-    },
-    "dependencies": {
-        "minimist": "1.1.0"
-    },
-    "devDependencies": {
-        "jshint": "^2.6.0"
-    },
-    "jshintConfig": {
-        "node": true
-    }
+  "name": "wetzel",
+  "version": "0.0.1",
+  "description": "Generate Markdown documentation from JSON Schema",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Patrick Cozzi",
+    "email": "pcozzi@agi.com",
+    "url": "https://twitter.com/pjcozzi"
+  },
+  "keywords": [
+    "json schema",
+    "markdown"
+  ],
+  "homepage": "https://github.com/AnalyticalGraphicsInc/wetzel",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:AnalyticalGraphicsInc/wetzel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AnalyticalGraphicsInc/wetzel/issues"
+  },
+  "scripts": {
+    "jshint": "./node_modules/jshint/bin/jshint *.js **/*.js --exclude build/**/*.js"
+  },
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+  },
+  "dependencies": {
+    "minimist": "1.1.0"
+  },
+  "devDependencies": {
+    "jshint": "^2.6.0",
+    "json-schema-test-suite": "0.0.10"
+  },
+  "jshintConfig": {
+    "node": true
+  }
 }
