@@ -8,6 +8,7 @@
         "email": "pcozzi@agi.com",
         "url": "https://twitter.com/pjcozzi"
     },
+    "main": "index.js",
     "keywords": [
         "json schema",
         "markdown"
@@ -35,5 +36,7 @@
     },
     "jshintConfig": {
         "node": true
-    }
+    },
+    "bin" : { "wetzel" : "./bin/wetzel.js" },
+    "preferGlobal": true
 }
