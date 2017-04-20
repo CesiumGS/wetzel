@@ -57,7 +57,7 @@ The offset relative to the start of the buffer in bytes.
 * **Required**: No, default: `0`
 * **Minimum**:` >= 0`
 
-## example.type :white_check_mark: 
+## example.type :white_check_mark:
 
 Specifies if the elements are scalars, vectors, or matrices.
 
@@ -81,12 +81,12 @@ It is useful to pipe the Markdown output to the clipboard and then paste into a 
 
 On Mac:
 ```
-node bin/wetzel.js ../glTF/specification/schema/accessor.schema.json -l 2 | pbcopy
+wetzel ../glTF/specification/schema/accessor.schema.json -l 2 | pbcopy
 ```
 
 On Windows:
 ```
-node bin/wetzel.js ../glTF/specification/schema/accessor.schema.json -l 2 | clip
+wetzel ../glTF/specification/schema/accessor.schema.json -l 2 | clip
 ```
 
 The `-l` option specifies the starting header level.
@@ -106,4 +106,3 @@ Developed by the Cesium team.
 <p align="center">
 <a href="http://cesiumjs.org/"><img src="doc/cesium.png" /></a>
 </p>
-
