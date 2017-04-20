@@ -13,17 +13,23 @@ if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
         '  -d,  --debug              Provide a path, and this will save out intermediate processing artifacts useful in debugging wetzel.' +
         '  -w,  --suppressWarnings   Will not print out WETZEL_WARNING strings indicating identified conversion problems. Default: false';
     process.stdout.write(help);
-    return;
+} else {
+  var filename = argv._[0];
+  var schema = JSON.parse(fs.readFileSync(filename));
+
+  generateMarkdown({
+      schema: schema,
+      filePath: filename,
+      basePath: path.dirname(filename),
+      headerLevel: defaultValue(defaultValue(argv.l, argv.headerLevel), 1),
+      debug: defaultValue(defaultValue(argv.d, argv.debug), null),
+      suppressWarnings: defaultValue(defaultValue(argv.w, argv.suppressWarnings), false),
+  }, function (err, md) {
+    if (err) {
+        process.stderr.write(err);
+        process.exit(2);
+    } else {
+        process.stdout.write(md);
+    }
+  });
 }
-
-var filename = argv._[0];
-var schema = JSON.parse(fs.readFileSync(filename));
-
-process.stdout.write(generateMarkdown({
-    schema: schema,
-    filePath: filename,
-    basePath: path.dirname(filename),
-    headerLevel: defaultValue(defaultValue(argv.l, argv.headerLevel), 1),
-    debug: defaultValue(defaultValue(argv.d, argv.debug), null),
-    suppressWarnings: defaultValue(defaultValue(argv.w, argv.suppressWarnings), false),
-}));
