@@ -94,6 +94,7 @@ Options:
 * The `-p` option lets you specify the relative path that should be used when referencing the schema, relative to where you store the documentation.
 * The `-w` option will suppress any warnings about potential documentation problems that wetzel normally prints by default.
 * The `-d` option lets you specify the root filename that will be used for writing intermediate wetzel artifacts that are useful when doing wetzel development.
+* The `-a` option will attempt to aggressively auto-link referenced type names in descriptions between each other.  If it's too agressive, you can add `=cqo` so that it only attempts to auto-link type names that are within "code-quotes only" (cqo) (e.g.: ``typeName``)
 
 <a name="common-usage"></a>
 ## Common Usage
@@ -102,13 +103,16 @@ The most common way to use this tool is to generate the entire glTF documentatio
 To do that, you simply need to pass-in the root schema file (glTF.schema.json):
 
 ```
-wetzel ../gltf/specification/2.0/schema/glTF.schema.json -p schema/ | clip
+wetzel ../glTF/specification/2.0/schema/gltf.schema.json -l 2 -p schema/ -i "['gltfid.schema.json', 'gltfchildofrootproperty.schema.json', 'gltfproperty.schema.json']" -a | clip
 ```
 
 That will generate documentation for glTF.schema.json, as well as all referenced schemas,
 all in a single set of markdown with inter-type linking.  By specifying the `-p` parameter,
 you've indicated where the actual json schema files will live relative to the documentation
-so that the type documentation can directly link to the type json file.
+so that the type documentation can directly link to the type json file.  By specifying the
+`-i` parameter, you've specified the list of schema files that should be ignored when writing
+out the top-level types.  By specifying the `-a` parameter, it will aggressively attempt to
+auto-link all referenced type names with each other.
 
 <a name="Limitations"></a>
 ## Limitations
