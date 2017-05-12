@@ -1,9 +1,10 @@
 The following people have contributed to wetzel, under the following agreements:
 
-## [Corporate CLA](http://www.agi.com/licenses/corporate-cla-agi-v1.0.txt)
+## [Corporate CLA](https://github.com/AnalyticalGraphicsInc/cesium/blob/master/Documentation/Contributors/CLAs/corporate-cla-agi-v1.0.txt)
 
 * [Analytical Graphics, Inc.](http://www.agi.com/)
    * [Patrick Cozzi](https://github.com/pjcozzi)
 
-## [Individual CLA](http://www.agi.com/licenses/individual-cla-agi-v1.0.txt)
-* [Matthew McMullan](https://github.com/MattMcMullan)
+## [Individual CLA](https://github.com/AnalyticalGraphicsInc/cesium/blob/master/Documentation/Contributors/CLAs/individual-cla-agi-v1.0.txt)
+   * [Matthew McMullan](https://github.com/MattMcMullan)
+   * [Howard Wolosky](https://github.com/HowardWolosky)
