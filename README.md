@@ -36,7 +36,13 @@ This JSON Schema:
 
 is used to generate this Markdown documentation:
 
-# example
+# Objects
+* [`example`](#reference-example) (root object)
+
+
+---------------------------------------
+<a name="reference-example"></a>
+## example
 
 Example description.
 
@@ -49,21 +55,28 @@ Example description.
 
 Additional properties are not allowed.
 
-## example.byteOffset
+### example.byteOffset
 
 The offset relative to the start of the buffer in bytes.
 
 * **Type**: `integer`
 * **Required**: No, default: `0`
-* **Minimum**:` >= 0`
+* **Minimum**: ` >= 0`
 
-## example.type :white_check_mark:
+### example.type :white_check_mark:
 
 Specifies if the elements are scalars, vectors, or matrices.
 
 * **Type**: `string`
 * **Required**: Yes
-* **Allowed values**: `"SCALAR"`, `"VEC2"`, `"VEC3"`, `"VEC4"`, `"MAT2"`, `"MAT3"`, `"MAT4"`
+* **Allowed values**:
+   * `"SCALAR"`
+   * `"VEC2"`
+   * `"VEC3"`
+   * `"VEC4"`
+   * `"MAT2"`
+   * `"MAT3"`
+   * `"MAT4"`
 
 ---
 
@@ -129,7 +142,7 @@ Pull requests are appreciated.  Please use the same [Contributor License Agreeme
 
 ---
 
-Developed by the Cesium team.
+Developed by the Cesium team and external contributors.
 <p align="center">
 <a href="http://cesiumjs.org/"><img src="doc/cesium.png" /></a>
 </p>
