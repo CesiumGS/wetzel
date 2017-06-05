@@ -9,3 +9,4 @@ The following people have contributed to wetzel, under the following agreements:
 ## [Individual CLA](https://github.com/AnalyticalGraphicsInc/cesium/blob/master/Documentation/Contributors/CLAs/individual-cla-agi-v1.0.txt)
    * [Matthew McMullan](https://github.com/MattMcMullan)
    * [Howard Wolosky](https://github.com/HowardWolosky)
+   * [Michael Dahrea](https://github.com/BeardedGnome)
