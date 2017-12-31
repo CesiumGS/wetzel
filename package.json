@@ -32,11 +32,14 @@
         "minimist": "1.1.0"
     },
     "devDependencies": {
-        "jshint": "^2.6.0"
+        "eslint": "^4.9.0",
+        "eslint-config-cesium": "^2.0.1"
     },
     "jshintConfig": {
         "node": true
     },
-    "bin" : { "wetzel" : "./bin/wetzel.js" },
+    "bin": {
+        "wetzel": "./bin/wetzel.js"
+    },
     "preferGlobal": true
 }

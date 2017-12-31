@@ -1,0 +1,10 @@
+{
+    "extends": "./node_modules/eslint-config-cesium/node.js",
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "rules": {
+        "quotes": ["off", "single", { "avoidEscape": true }],
+        "guard-for-in": ["off"]
+    }
+}
