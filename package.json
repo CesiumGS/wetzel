@@ -37,6 +37,8 @@
     "jshintConfig": {
         "node": true
     },
-    "bin" : { "wetzel" : "./bin/wetzel.js" },
+    "bin": {
+        "wetzel": "./bin/wetzel.js"
+    },
     "preferGlobal": true
 }
