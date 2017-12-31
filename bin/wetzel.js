@@ -12,10 +12,15 @@ if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
     var help = 'Usage: node ' + path.basename(__filename) + ' [path-to-json-schema-file] [OPTIONS]\n' +
         '  -l,  --headerLevel        Top-level header. Default: 1\n' +
         '  -p,  --schemaPath         The path string that should be used when generating the schema reference paths.\n' +
-        '  -a,  --autoLink           Aggressively auto-inter-link types referenced in descriptions.  Add =cqo to auto-link types that are in code-quotes only.\n' +
-        '  -i                        An array of schema filenames (no paths) that should not get their own table of contents entry, nor type listing (they are just used for sharing properties across multiple other schemas)'
-        '  -d,  --debug              Provide a path, and this will save out intermediate processing artifacts useful in debugging wetzel.' +
-        '  -w,  --suppressWarnings   Will not print out WETZEL_WARNING strings indicating identified conversion problems. Default: false';
+        '  -a,  --autoLink           Aggressively auto-inter-link types referenced in descriptions.\n' +
+        '                                Add =cqo to auto-link types that are in code-quotes only.\n' +
+        '  -i                        An array of schema filenames (no paths) that should not get their own\n' +
+        '                                table of contents entry, nor type listing (they are just used for\n' +
+        '                                sharing properties across multiple other schemas)\n' +
+        '  -d,  --debug              Provide a path, and this will save out intermediate processing\n' +
+        '                                artifacts useful in debugging wetzel.\n' +
+        '  -w,  --suppressWarnings   Will not print out WETZEL_WARNING strings indicating identified\n' +
+        '                                conversion problems. Default: false\n';
     process.stdout.write(help);
     return;
 }
