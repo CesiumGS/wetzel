@@ -109,6 +109,7 @@ Options:
 * The `-d` option lets you specify the root filename that will be used for writing intermediate wetzel artifacts that are useful when doing wetzel development.
 * The `-a` option will attempt to aggressively auto-link referenced type names in descriptions between each other.  If it's too agressive, you can add `=cqo` so that it only attempts to auto-link type names that are within "code-quotes only" (cqo) (e.g.: ``typeName``)
 * The `-i` option lets you specify an array of schema filenames that might be referenced by others, but shouldn't get their own documentation section.
+* The `-r` option, if set to true, will display `(root object)` next to the root object in the table of contents.
 
 <a name="common-usage"></a>
 ## Common Usage

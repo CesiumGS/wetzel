@@ -21,7 +21,8 @@ if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
         '  -d,  --debug              Provide a path, and this will save out intermediate processing\n' +
         '                                artifacts useful in debugging wetzel.\n' +
         '  -w,  --suppressWarnings   Will not print out WETZEL_WARNING strings indicating identified\n' +
-        '                                conversion problems. Default: false\n';
+        '                                conversion problems. Default: false\n' +
+        '  -r, --rootObject          Notes the root object in the table of contents. Default: false\n';
     process.stdout.write(help);
     return;
 }
@@ -63,5 +64,6 @@ process.stdout.write(generateMarkdown({
     debug: defaultValue(defaultValue(argv.d, argv.debug), null),
     suppressWarnings: defaultValue(defaultValue(argv.w, argv.suppressWarnings), false),
     autoLink: autoLink,
-    ignorableTypes: ignorableTypes
+    ignorableTypes: ignorableTypes,
+    rootObject:  defaultValue(defaultValue(argv.r, argv.rootObject), false)
 }));
