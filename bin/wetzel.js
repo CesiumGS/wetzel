@@ -12,6 +12,7 @@ if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
     var help = 'Usage: node ' + path.basename(__filename) + ' [path-to-json-schema-file] [OPTIONS]\n' +
         '  -l,  --headerLevel        Top-level header. Default: 1\n' +
         '  -p,  --schemaPath         The path string that should be used when generating the schema reference paths.\n' +
+        '  -s,  --searchPath         The path string that should be used when loading the schema reference paths.\n' +
         '  -a,  --autoLink           Aggressively auto-inter-link types referenced in descriptions.\n' +
         '                                Add =cqo to auto-link types that are in code-quotes only.\n' +
         '  -i                        An array of schema filenames (no paths) that should not get their own\n' +
@@ -47,11 +48,16 @@ ignorableTypesString = ignorableTypesString.replace(/'/g, '\"');
 ignorableTypesString = ignorableTypesString.replace(/"/g, '\"');
 var ignorableTypes = JSON.parse(ignorableTypesString);
 
+var searchPath = ['', path.dirname(filepath)];
+if (defined(argv.s) || defined(argv.searchPath)) {
+    searchPath.push(defaultValue(argv.s, argv.searchPath));
+}
+
 process.stdout.write(generateMarkdown({
     schema: schema,
     filePath: filepath,
     fileName: path.basename(filepath),
-    basePath: path.dirname(filepath),
+    searchPath: searchPath,
     headerLevel: defaultValue(defaultValue(argv.l, argv.headerLevel), 1),
     schemaRelativeBasePath: defaultValue(defaultValue(argv.p, argv.schemaPath), null),
     debug: defaultValue(defaultValue(argv.d, argv.debug), null),
