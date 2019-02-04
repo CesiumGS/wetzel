@@ -10,3 +10,4 @@ The following people have contributed to wetzel, under the following agreements:
    * [Matthew McMullan](https://github.com/MattMcMullan)
    * [Howard Wolosky](https://github.com/HowardWolosky)
    * [Michael Dahrea](https://github.com/BeardedGnome)
+   * [Marco Hutter](https://github.com/javagl)
