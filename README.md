@@ -138,7 +138,7 @@ This tool was developed to generate reference documentaiton for the [glTF](https
 
 ## Contributions
 
-Pull requests are appreciated.  Please use the same [Contributor License Agreement (CLA)](https://github.com/AnalyticalGraphicsInc/cesium/blob/master/CONTRIBUTING.md) used for [Cesium](http://cesiumjs.org/).
+Pull requests are appreciated!  Please use the same [Contributor License Agreement (CLA)](https://github.com/CesiumGS/cesium/blob/master/CONTRIBUTING.md) used for [Cesium](https://github.com/CesiumGS/cesium).
 
 ---
 
