@@ -13,16 +13,13 @@
         "json schema",
         "markdown"
     ],
-    "homepage": "https://github.com/AnalyticalGraphicsInc/wetzel",
+    "homepage": "https://github.com/CesiumGS/wetzel",
     "repository": {
         "type": "git",
-        "url": "git@github.com:AnalyticalGraphicsInc/wetzel.git"
+        "url": "git@github.com:CesiumGS/wetzel.git"
     },
     "bugs": {
-        "url": "https://github.com/AnalyticalGraphicsInc/wetzel/issues"
-    },
-    "scripts": {
-        "jshint": "./node_modules/jshint/bin/jshint *.js **/*.js --exclude build/**/*.js"
+        "url": "https://github.com/CesiumGS/wetzel/issues"
     },
     "directories": {
         "bin": "./bin",
@@ -32,14 +29,9 @@
         "minimist": "1.1.0"
     },
     "devDependencies": {
-        "eslint": "^4.9.0",
-        "eslint-config-cesium": "^2.0.1"
-    },
-    "jshintConfig": {
-        "node": true
+        "eslint": "^7.10.0"
     },
     "bin": {
         "wetzel": "./bin/wetzel.js"
-    },
-    "preferGlobal": true
+    }
 }
