@@ -13,6 +13,7 @@ if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
         '  -l,  --headerLevel        Top-level header. Default: 1\n' +
         '  -p,  --schemaPath         The path string that should be used when generating the schema reference paths.\n' +
         '  -s,  --searchPath         The path string that should be used when loading the schema reference paths.\n' +
+        '  -m,  --outputMode         The output mode, Markdown (the default) or AsciiDoctor (a).' +
         '  -a,  --autoLink           Aggressively auto-inter-link types referenced in descriptions.\n' +
         '                                Add =cqo to auto-link types that are in code-quotes only.\n' +
         '  -i                        An array of schema filenames (no paths) that should not get their own\n' +
@@ -40,6 +41,11 @@ switch (defaultValue(argv.a, argv.autoLink)) {
         break;
 }
 
+var styleModeArgument = defaultValue(argv.m, argv.outputMode);
+if (styleModeArgument === 'a' || styleModeArgument === '=a') {
+    styleModeArgument = enums.styleModeOption.AsciiDoctor;
+}
+
 // We're expecting users to pass in an array as a "string", but we aren't expecting them
 // to pass it in as a correctly JSON-escaped string.  Therefore, we need to replace single
 // or double-quotes with a backslash-double-quote, and then we can parse the object.
@@ -58,6 +64,7 @@ process.stdout.write(generateMarkdown({
     filePath: filepath,
     fileName: path.basename(filepath),
     searchPath: searchPath,
+    styleMode: styleModeArgument,
     headerLevel: defaultValue(defaultValue(argv.l, argv.headerLevel), 1),
     schemaRelativeBasePath: defaultValue(defaultValue(argv.p, argv.schemaPath), null),
     debug: defaultValue(defaultValue(argv.d, argv.debug), null),
