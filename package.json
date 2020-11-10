@@ -26,6 +26,7 @@
         "lib": "./lib"
     },
     "dependencies": {
+        "jsonpointer": "^4.1.0",
         "minimist": "1.1.0"
     },
     "devDependencies": {
