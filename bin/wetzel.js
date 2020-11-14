@@ -14,6 +14,7 @@ if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
         '  -p,  --schemaPath         The path string that should be used when generating the schema reference paths.\n' +
         '  -s,  --searchPath         The path string that should be used when loading the schema reference paths.\n' +
         '  -m,  --outputMode         The output mode, Markdown (the default) or AsciiDoctor (a).' +
+        '  -n,  --noTOC              Skip writing the Table of Contents.' +
         '  -a,  --autoLink           Aggressively auto-inter-link types referenced in descriptions.\n' +
         '                                Add =cqo to auto-link types that are in code-quotes only.\n' +
         '  -i                        An array of schema filenames (no paths) that should not get their own\n' +
@@ -65,6 +66,7 @@ process.stdout.write(generateMarkdown({
     fileName: path.basename(filepath),
     searchPath: searchPath,
     styleMode: styleModeArgument,
+    writeTOC: !defaultValue(defaultValue(argv.n, argv.noTOC), false),
     headerLevel: defaultValue(defaultValue(argv.l, argv.headerLevel), 1),
     schemaRelativeBasePath: defaultValue(defaultValue(argv.p, argv.schemaPath), null),
     debug: defaultValue(defaultValue(argv.d, argv.debug), null),

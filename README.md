@@ -112,6 +112,7 @@ Options:
 * The `-p` option lets you specify the relative path that should be used when referencing the schema, relative to where you store the documentation.
 * The `-s` option lets you specify the path string that should be used when loading the schema reference paths.
 * The `-m` option controls the output style mode. The default is `Markdown`, use `-m=a` for `AsciiDoctor` mode.
+* The `-n` option will skip writing a Table of Contents.
 * The `-w` option will suppress any warnings about potential documentation problems that wetzel normally prints by default.
 * The `-d` option lets you specify the root filename that will be used for writing intermediate wetzel artifacts that are useful when doing wetzel development.
 * The `-a` option will attempt to aggressively auto-link referenced type names in descriptions between each other.  If it's too agressive, you can add `=cqo` so that it only attempts to auto-link type names that are within "code-quotes only" (cqo) (e.g.: ``typeName``)
