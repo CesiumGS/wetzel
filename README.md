@@ -102,6 +102,11 @@ On Windows:
 wetzel.js ../glTF/specification/2.0/schema/accessor.schema.json -l 2 | clip
 ```
 
+Run the tests:
+```
+npm run test
+```
+
 Options:
 * The `-l` option specifies the starting header level.
 * The `-p` option lets you specify the relative path that should be used when referencing the schema, relative to where you store the documentation.
