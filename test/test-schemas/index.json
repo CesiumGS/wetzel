@@ -1,0 +1,18 @@
+{
+    "options": {
+        "simple.md": "",
+        "simple.adoc": "-m=a",
+        "linked.md": "-l2 -a=cqo -p schema",
+        "linked.adoc": "-l2 -a=cqo -m=a -p schema",
+        "remote.md": "-l2 -a=cqo -p \"https://www.khronos.org/wetzel/just/testing/schema\"",
+        "remote.adoc": "-l2 -a=cqo -m=a -p \"https://www.khronos.org/wetzel/just/testing/schema\""
+    },
+    "schemas": [{
+        "name": "example",
+        "path": "example/example.schema.json"
+    }, {
+        "name": "nested",
+        "path": "nested/nestedTest.schema.json",
+        "ignore": "['nestedid.schema.json', 'nestedchildofrootproperty.schema.json', 'nestedtestproperty.schema.json']"
+    }]
+}

@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "Material PBR Metallic Roughness",
+    "type": "object",
+    "description": "A set of parameter values that are used to define the metallic-roughness material model from Physically-Based Rendering (PBR) methodology.",
+    "allOf": [ { "$ref": "nestedTestProperty.schema.json" } ],
+    "properties": {
+        "baseColorFactor": {
+            "type": "array",
+            "items": {
+                "type": "number",
+                "minimum": 0.0,
+                "maximum": 1.0
+            },
+            "description": "The material's base color factor.",
+            "default": [ 1.0, 1.0, 1.0, 1.0 ],
+            "minItems": 4,
+            "maxItems": 4,
+            "gltf_detailedDescription": "The RGBA components of the base color of the material. This is the detailed description of the property."
+        },
+        "metallicFactor": {
+            "type": "number",
+            "description": "The metalness of the material.",
+            "default": 1.0,
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "gltf_detailedDescription": "The metalness of the material. This is the detailed description of the property."
+        },
+        "roughnessFactor": {
+            "type": "number",
+            "description": "The roughness of the material.",
+            "default": 1.0,
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "gltf_detailedDescription": "The roughness of the material. This is the detailed description of the property."
+        },
+        "extensions": { },
+        "extras": { }
+    }
+}

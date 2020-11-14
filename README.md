@@ -46,10 +46,10 @@ is used to generate this Markdown documentation:
 
 Example description.
 
-**Properties**
+**`example` Properties**
 
 |   |Type|Description|Required|
-|---|----|-----------|--------|
+|---|---|---|---|
 |**byteOffset**|`integer`|The offset relative to the start of the buffer in bytes.|No, default: `0`|
 |**type**|`string`|Specifies if the elements are scalars, vectors, or matrices.| &#x2705; Yes|
 
@@ -63,7 +63,7 @@ The offset relative to the start of the buffer in bytes.
 * **Required**: No, default: `0`
 * **Minimum**: ` >= 0`
 
-### example.type &#x2705;
+### example.type &#x2705; 
 
 Specifies if the elements are scalars, vectors, or matrices.
 
@@ -102,9 +102,16 @@ On Windows:
 wetzel.js ../glTF/specification/2.0/schema/accessor.schema.json -l 2 | clip
 ```
 
+Run the tests:
+```
+npm run test
+```
+
 Options:
 * The `-l` option specifies the starting header level.
 * The `-p` option lets you specify the relative path that should be used when referencing the schema, relative to where you store the documentation.
+* The `-s` option lets you specify the path string that should be used when loading the schema reference paths.
+* The `-m` option controls the output style mode. The default is `Markdown`, use `-m=a` for `AsciiDoctor` mode.
 * The `-w` option will suppress any warnings about potential documentation problems that wetzel normally prints by default.
 * The `-d` option lets you specify the root filename that will be used for writing intermediate wetzel artifacts that are useful when doing wetzel development.
 * The `-a` option will attempt to aggressively auto-link referenced type names in descriptions between each other.  If it's too agressive, you can add `=cqo` so that it only attempts to auto-link type names that are within "code-quotes only" (cqo) (e.g.: ``typeName``)

@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "Image",
+    "type": "object",
+    "description": "Image data used to create a texture. Image can be referenced by URI or `bufferView` index. `mimeType` is required in the latter case.",
+    "allOf": [ { "$ref": "nestedChildOfRootProperty.schema.json" } ],
+    "properties": {
+        "uri": {
+            "type": "string",
+            "description": "The uri of the image.",
+            "format": "uriref",
+            "gltf_detailedDescription": "The uri of the image.  This is the detailed description of the property.",
+            "gltf_uriType": "image"
+        },
+        "mimeType": {
+            "anyOf": [
+                {
+                    "enum": [ "image/jpeg" ]
+                },
+                {
+                    "enum": [ "image/png" ]
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "description": "The image's MIME type. Required if `bufferView` is defined."
+        },
+        "bufferView": {
+            "allOf": [ { "$ref": "nestedID.schema.json" } ],
+            "description": "The index of the bufferView that contains the image. Use this instead of the image's uri property."
+        },
+        "fraction": {
+            "type": "number",
+            "description": "A number that must be between zero and one.",
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "exclusiveMinimum": true,
+            "exclusiveMaximum": true
+        },
+        "name": { },
+        "extensions": { },
+        "extras": { }
+    },
+    "dependencies": {
+        "bufferView": [ "mimeType" ]
+    },
+    "oneOf": [
+        { "required": [ "uri" ] },
+        { "required": [ "bufferView" ] }
+    ]
+}

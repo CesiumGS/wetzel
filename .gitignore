@@ -2,3 +2,6 @@
 .DS_Store
 Thumbs.db
 .vscode/*
+
+# Ignore generated test outputs
+test/test-output

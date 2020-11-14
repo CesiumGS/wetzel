@@ -1,0 +1,21 @@
+{
+    "$schema" : "http://json-schema.org/draft-03/schema",
+    "title" : "example",
+    "type" : "object",
+    "description" : "Example description.",
+    "properties" : {
+        "byteOffset" : {
+            "type" : "integer",
+            "description" : "The offset relative to the start of the buffer in bytes.",
+            "minimum" : 0,
+            "default" : 0
+        },
+        "type" : {
+            "type" : "string",
+            "description" : "Specifies if the elements are scalars, vectors, or matrices.",
+            "enum" : ["SCALAR", "VEC2", "VEC3", "VEC4", "MAT2", "MAT3", "MAT4"],
+            "required" : true
+        }
+    },
+    "additionalProperties" : false
+}

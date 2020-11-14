@@ -11,6 +11,8 @@
     "rules": {
         "quotes": ["off", "single", { "avoidEscape": true }],
         "guard-for-in": ["off"],
+        "semi": 1,
+        "no-extra-semi": 1,
         "no-prototype-builtins": "off",
         "no-useless-escape": "off"
     }
