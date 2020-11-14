@@ -32,7 +32,7 @@ The offset relative to the start of the buffer in bytes.
 
 * **Type**: `integer`
 * **Required**: No, default: `0`
-* **Minimum**: ` >= 0`
+* **Minimum**: `&gt;= 0`
 
 === example.type &#x2705; 
 

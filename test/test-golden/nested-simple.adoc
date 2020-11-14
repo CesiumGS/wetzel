@@ -63,7 +63,7 @@ The offset into the buffer in bytes.
 
 * **Type**: `integer`
 * **Required**: No, default: `0`
-* **Minimum**: ` >= 0`
+* **Minimum**: `&gt;= 0`
 
 === bufferView.byteLength &#x2705; 
 
@@ -71,7 +71,7 @@ The length of the bufferView in bytes.
 
 * **Type**: `integer`
 * **Required**: Yes
-* **Minimum**: ` >= 1`
+* **Minimum**: `&gt;= 1`
 
 === bufferView.byteStride
 
@@ -79,8 +79,8 @@ The stride, in bytes, between vertex attributes.  This is the detailed descripti
 
 * **Type**: `integer`
 * **Required**: No
-* **Minimum**: ` >= 4`
-* **Maximum**: ` <= 252`
+* **Minimum**: `&gt;= 4`
+* **Maximum**: `&lt;= 252`
 * **Related WebGL functions**: `vertexAttribPointer()` stride parameter
 
 === bufferView.target
@@ -213,7 +213,7 @@ The index of the bufferView that contains the image. Use this instead of the ima
 
 * **Type**: `integer`
 * **Required**: No
-* **Minimum**: ` >= 0`
+* **Minimum**: `&gt;= 0`
 
 === image.fraction
 
@@ -221,8 +221,8 @@ A number that must be between zero and one.
 
 * **Type**: `number`
 * **Required**: No
-* **Minimum**: ` > 0`
-* **Maximum**: ` < 1`
+* **Minimum**: `&gt; 0`
+* **Maximum**: `&lt; 1`
 
 === image.name
 
@@ -357,7 +357,7 @@ Specifies the cutoff threshold when in `MASK` mode. This is the detailed descrip
 
 * **Type**: `number`
 * **Required**: No, default: `0.5`
-* **Minimum**: ` >= 0`
+* **Minimum**: `&gt;= 0`
 
 === material.doubleSided
 
@@ -422,8 +422,8 @@ The metalness of the material. This is the detailed description of the property.
 
 * **Type**: `number`
 * **Required**: No, default: `1`
-* **Minimum**: ` >= 0`
-* **Maximum**: ` <= 1`
+* **Minimum**: `&gt;= 0`
+* **Maximum**: `&lt;= 1`
 
 === material.pbrMetallicRoughness.roughnessFactor
 
@@ -431,8 +431,8 @@ The roughness of the material. This is the detailed description of the property.
 
 * **Type**: `number`
 * **Required**: No, default: `1`
-* **Minimum**: ` >= 0`
-* **Maximum**: ` <= 1`
+* **Minimum**: `&gt;= 0`
+* **Maximum**: `&lt;= 1`
 
 === material.pbrMetallicRoughness.extensions
 
