@@ -23,6 +23,18 @@
             "minItems": 1,
             "gltf_detailedDescription": "An array of materials.  This is the detailed description of the property."
         },
+        "version": {
+            "type": "string",
+            "description": "A version string with a specific pattern.",
+            "pattern": "^[0-9]+\\.[0-9]+$"
+        },
+        "uri": {
+            "type": "string",
+            "description": "A string that should reference a URI.",
+            "format": "uriref",
+            "gltf_detailedDescription": "A string that should reference a URI.  This is the detailed description of the property.",
+            "gltf_uriType": "application"
+        },
         "extensions": { },
         "extras": { }
     },

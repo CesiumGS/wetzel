@@ -271,6 +271,8 @@ The root object for a nestedTest asset.
 |---|---|---|---|
 |**bufferViews**|`bufferView` `[1-*]`|An array of bufferViews.| &#x2705; Yes|
 |**materials**|`material` `[1-*]`|An array of materials.|No|
+|**version**|`string`|A version string with a specific pattern.|No|
+|**uri**|`string`|A string that should reference a URI.|No|
 |**extensions**|`extension`|Dictionary object with extension-specific objects.|No|
 |**extras**|`extras`|Application-specific data.|No|
 
@@ -289,6 +291,21 @@ An array of materials.  This is the detailed description of the property.
 
 * **Type**: `material` `[1-*]`
 * **Required**: No
+
+### nestedTest.version
+
+A version string with a specific pattern.
+
+* **Type**: `string`
+* **Required**: No
+
+### nestedTest.uri
+
+A string that should reference a URI.  This is the detailed description of the property.
+
+* **Type**: `string`
+* **Required**: No
+* **Format**: uriref
 
 ### nestedTest.extensions
 
