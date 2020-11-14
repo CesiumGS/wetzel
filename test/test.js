@@ -61,6 +61,7 @@ describe('wetzel', function () {
 
                     it('should match golden ' + outputName, function () {
                         let outputText = fs.readFileSync(outputPathName).toString();
+                        assert.ok(outputText.length > 1);
                         let goldenText = fs.readFileSync(goldenPathName).toString();
                         assert.strictEqual(outputText, goldenText);
                     });
