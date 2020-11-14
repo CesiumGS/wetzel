@@ -1,0 +1,13 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "nestedTest Child of Root Property",
+    "type": "object",
+    "allOf": [ { "$ref": "nestedTestProperty.schema.json" } ],
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The user-defined name of this object.",
+            "gltf_detailedDescription": "The user-defined name of this object.  This is the detailed description of the property."
+        }
+    }
+}
