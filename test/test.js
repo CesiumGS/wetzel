@@ -6,8 +6,8 @@ const assert = require('assert');
 
 const WETZEL_BIN = 'node ./bin/wetzel.js';
 const SCHEMA_PREFIX = 'test/test-schemas/';
+const GOLDEN_PREFIX = 'test/test-golden/';
 const OUT_PREFIX = process.env.OUT_PREFIX || 'test/test-output/';
-const GOLDEN_PREFIX = process.env.OUT_PREFIX || 'test/test-golden/';
 
 /**
  * These tests do not follow typical unit testing guidelines. The final end user never
