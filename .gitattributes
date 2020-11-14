@@ -1,2 +1,5 @@
 # Workaround for https://github.com/npm/npm/issues/17161
 package*.json text eol=lf
+
+# Golden files
+test/test-golden/* text eol=lf
