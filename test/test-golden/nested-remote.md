@@ -2,6 +2,7 @@
 * [`Buffer View`](#reference-bufferview)
 * [`Extension`](#reference-extension)
 * [`Extras`](#reference-extras)
+* [`Image`](#reference-image)
 * [`Material`](#reference-material)
    * [`PBR Metallic Roughness`](#reference-material-pbrmetallicroughness)
 * [`nestedTest`](#reference-nestedtest) (root object)
@@ -111,6 +112,78 @@ Additional properties are allowed.
 Application-specific data.
 
 **Implementation Note:** Although extras may have any type, it is common for applications to store and access custom data as key/value pairs. As best practice, extras should be an Object rather than a primitive value for best portability.
+
+
+
+---------------------------------------
+<a name="reference-image"></a>
+### Image
+
+Image data used to create a texture. Image can be referenced by URI or `bufferView` index. `mimeType` is required in the latter case.
+
+**`Image` Properties**
+
+|   |Type|Description|Required|
+|---|---|---|---|
+|**uri**|`string`|The uri of the image.|No|
+|**mimeType**|`string`|The image's MIME type. Required if `bufferView` is defined.|No|
+|**bufferView**|`integer`|The index of the bufferView that contains the image. Use this instead of the image's uri property.|No|
+|**name**|`string`|The user-defined name of this object.|No|
+|**extensions**|[`extension`](#reference-extension)|Dictionary object with extension-specific objects.|No|
+|**extras**|[`extras`](#reference-extras)|Application-specific data.|No|
+
+Additional properties are allowed.
+
+* **JSON schema**: [image.schema.json](https://www.khronos.org/wetzel/just/testing/schema/image.schema.json)
+
+#### image.uri
+
+The uri of the image.  This is the detailed description of the property.
+
+* **Type**: `string`
+* **Required**: No
+* **Format**: uriref
+
+#### image.mimeType
+
+The image's MIME type. Required if `bufferView` is defined.
+
+* **Type**: `string`
+* **Required**: No
+* **Allowed values**:
+   * `"image/jpeg"`
+   * `"image/png"`
+
+#### image.bufferView
+
+The index of the bufferView that contains the image. Use this instead of the image's uri property.
+
+* **Type**: `integer`
+* **Required**: No
+* **Minimum**: ` >= 0`
+
+#### image.name
+
+The user-defined name of this object.  This is the detailed description of the property.
+
+* **Type**: `string`
+* **Required**: No
+
+#### image.extensions
+
+Dictionary object with extension-specific objects.
+
+* **Type**: [`extension`](#reference-extension)
+* **Required**: No
+* **Type of each property**: Extension
+
+#### image.extras
+
+Application-specific data.
+
+* **Type**: [`extras`](#reference-extras)
+* **Required**: No
+
 
 
 
@@ -279,6 +352,7 @@ The root object for a nestedTest asset.
 |---|---|---|---|
 |**bufferViews**|[`bufferView`](#reference-bufferview) `[1-*]`|An array of bufferViews.| &#x2705; Yes|
 |**materials**|[`material`](#reference-material) `[1-*]`|An array of materials.|No|
+|**images**|[`image`](#reference-image) `[1-*]`|An array of images.|No|
 |**version**|`string`|A version string with a specific pattern.|No|
 |**uri**|`string`|A string that should reference a URI.|No|
 |**extensions**|[`extension`](#reference-extension)|Dictionary object with extension-specific objects.|No|
@@ -300,6 +374,13 @@ An array of bufferViews.  This is the detailed description of the property.
 An array of materials.  This is the detailed description of the property.
 
 * **Type**: [`material`](#reference-material) `[1-*]`
+* **Required**: No
+
+#### nestedTest.images
+
+An array of images.  This is the detailed description of the property.
+
+* **Type**: [`image`](#reference-image) `[1-*]`
 * **Required**: No
 
 #### nestedTest.version

@@ -23,6 +23,15 @@
             "minItems": 1,
             "gltf_detailedDescription": "An array of materials.  This is the detailed description of the property."
         },
+        "images": {
+            "type": "array",
+            "description": "An array of images.",
+            "items": {
+                "$ref": "image.schema.json"
+            },
+            "minItems": 1,
+            "gltf_detailedDescription": "An array of images.  This is the detailed description of the property."
+        },
         "version": {
             "type": "string",
             "description": "A version string with a specific pattern.",
