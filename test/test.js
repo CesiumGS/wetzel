@@ -48,7 +48,6 @@ describe('wetzel', function () {
 
                     it('should generate ' + outputName, function (done) {
                         const cmd = `${WETZEL_BIN} ${index.options[option]} ${ignore} ${inputPathName} > ${outputPathName}`;
-                        //console.log(cmd);
                         exec(cmd, (error) => {
                             if (error) {
                                 console.error('** ERROR ** ' + error);
