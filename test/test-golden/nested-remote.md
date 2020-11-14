@@ -128,6 +128,7 @@ Image data used to create a texture. Image can be referenced by URI or `bufferVi
 |**uri**|`string`|The uri of the image.|No|
 |**mimeType**|`string`|The image's MIME type. Required if `bufferView` is defined.|No|
 |**bufferView**|`integer`|The index of the bufferView that contains the image. Use this instead of the image's uri property.|No|
+|**fraction**|`number`|A number that must be between zero and one.|No|
 |**name**|`string`|The user-defined name of this object.|No|
 |**extensions**|[`extension`](#reference-extension)|Dictionary object with extension-specific objects.|No|
 |**extras**|[`extras`](#reference-extras)|Application-specific data.|No|
@@ -161,6 +162,15 @@ The index of the bufferView that contains the image. Use this instead of the ima
 * **Type**: `integer`
 * **Required**: No
 * **Minimum**: ` >= 0`
+
+#### image.fraction
+
+A number that must be between zero and one.
+
+* **Type**: `number`
+* **Required**: No
+* **Minimum**: ` > 0`
+* **Maximum**: ` < 1`
 
 #### image.name
 
