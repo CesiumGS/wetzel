@@ -399,6 +399,7 @@ A version string with a specific pattern.
 
 * **Type**: `string`
 * **Required**: No
+* **Pattern**: `^[0-9]+\.[0-9]+$`
 
 #### nestedTest.uri
 

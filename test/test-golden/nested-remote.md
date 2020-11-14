@@ -1,16 +1,8 @@
-## Objects
-* [`Buffer View`](#reference-bufferview)
-* [`Extension`](#reference-extension)
-* [`Extras`](#reference-extras)
-* [`Image`](#reference-image)
-* [`Material`](#reference-material)
-   * [`PBR Metallic Roughness`](#reference-material-pbrmetallicroughness)
-* [`nestedTest`](#reference-nestedtest) (root object)
 
 
 ---------------------------------------
 <a name="reference-bufferview"></a>
-### Buffer View
+## Buffer View
 
 A view into a buffer.
 
@@ -30,7 +22,7 @@ Additional properties are allowed.
 
 * **JSON schema**: [bufferView.schema.json](https://www.khronos.org/wetzel/just/testing/schema/bufferView.schema.json)
 
-#### bufferView.byteOffset
+### bufferView.byteOffset
 
 The offset into the buffer in bytes.
 
@@ -38,7 +30,7 @@ The offset into the buffer in bytes.
 * **Required**: No, default: `0`
 * **Minimum**: ` >= 0`
 
-#### bufferView.byteLength &#x2705; 
+### bufferView.byteLength &#x2705; 
 
 The length of the bufferView in bytes.
 
@@ -46,7 +38,7 @@ The length of the bufferView in bytes.
 * **Required**: Yes
 * **Minimum**: ` >= 1`
 
-#### bufferView.byteStride
+### bufferView.byteStride
 
 The stride, in bytes, between vertex attributes.  This is the detailed description of the property.
 
@@ -56,7 +48,7 @@ The stride, in bytes, between vertex attributes.  This is the detailed descripti
 * **Maximum**: ` <= 252`
 * **Related WebGL functions**: `vertexAttribPointer()` stride parameter
 
-#### bufferView.target
+### bufferView.target
 
 This is a test of some enums.
 
@@ -67,14 +59,14 @@ This is a test of some enums.
    * `34963` ELEMENT_ARRAY_BUFFER
 * **Related WebGL functions**: `bindBuffer()`
 
-#### bufferView.name
+### bufferView.name
 
 The user-defined name of this object.  This is the detailed description of the property.
 
 * **Type**: `string`
 * **Required**: No
 
-#### bufferView.extensions
+### bufferView.extensions
 
 Dictionary object with extension-specific objects.
 
@@ -82,7 +74,7 @@ Dictionary object with extension-specific objects.
 * **Required**: No
 * **Type of each property**: Extension
 
-#### bufferView.extras
+### bufferView.extras
 
 Application-specific data.
 
@@ -94,7 +86,7 @@ Application-specific data.
 
 ---------------------------------------
 <a name="reference-extension"></a>
-### Extension
+## Extension
 
 Dictionary object with extension-specific objects.
 
@@ -107,7 +99,7 @@ Additional properties are allowed.
 
 ---------------------------------------
 <a name="reference-extras"></a>
-### Extras
+## Extras
 
 Application-specific data.
 
@@ -117,7 +109,7 @@ Application-specific data.
 
 ---------------------------------------
 <a name="reference-image"></a>
-### Image
+## Image
 
 Image data used to create a texture. Image can be referenced by URI or `bufferView` index. `mimeType` is required in the latter case.
 
@@ -137,7 +129,7 @@ Additional properties are allowed.
 
 * **JSON schema**: [image.schema.json](https://www.khronos.org/wetzel/just/testing/schema/image.schema.json)
 
-#### image.uri
+### image.uri
 
 The uri of the image.  This is the detailed description of the property.
 
@@ -145,7 +137,7 @@ The uri of the image.  This is the detailed description of the property.
 * **Required**: No
 * **Format**: uriref
 
-#### image.mimeType
+### image.mimeType
 
 The image's MIME type. Required if `bufferView` is defined.
 
@@ -155,7 +147,7 @@ The image's MIME type. Required if `bufferView` is defined.
    * `"image/jpeg"`
    * `"image/png"`
 
-#### image.bufferView
+### image.bufferView
 
 The index of the bufferView that contains the image. Use this instead of the image's uri property.
 
@@ -163,7 +155,7 @@ The index of the bufferView that contains the image. Use this instead of the ima
 * **Required**: No
 * **Minimum**: ` >= 0`
 
-#### image.fraction
+### image.fraction
 
 A number that must be between zero and one.
 
@@ -172,14 +164,14 @@ A number that must be between zero and one.
 * **Minimum**: ` > 0`
 * **Maximum**: ` < 1`
 
-#### image.name
+### image.name
 
 The user-defined name of this object.  This is the detailed description of the property.
 
 * **Type**: `string`
 * **Required**: No
 
-#### image.extensions
+### image.extensions
 
 Dictionary object with extension-specific objects.
 
@@ -187,7 +179,7 @@ Dictionary object with extension-specific objects.
 * **Required**: No
 * **Type of each property**: Extension
 
-#### image.extras
+### image.extras
 
 Application-specific data.
 
@@ -199,7 +191,7 @@ Application-specific data.
 
 ---------------------------------------
 <a name="reference-material"></a>
-### Material
+## Material
 
 The material appearance of a primitive.
 
@@ -220,14 +212,14 @@ Additional properties are allowed.
 
 * **JSON schema**: [material.schema.json](https://www.khronos.org/wetzel/just/testing/schema/material.schema.json)
 
-#### material.name
+### material.name
 
 The user-defined name of this object.  This is the detailed description of the property.
 
 * **Type**: `string`
 * **Required**: No
 
-#### material.extensions
+### material.extensions
 
 Dictionary object with extension-specific objects.
 
@@ -235,21 +227,21 @@ Dictionary object with extension-specific objects.
 * **Required**: No
 * **Type of each property**: Extension
 
-#### material.extras
+### material.extras
 
 Application-specific data.
 
 * **Type**: [`extras`](#reference-extras)
 * **Required**: No
 
-#### material.pbrMetallicRoughness
+### material.pbrMetallicRoughness
 
 A set of parameter values that are used to define the metallic-roughness material model from Physically-Based Rendering (PBR) methodology. When not specified, all the default values of `pbrMetallicRoughness` apply.
 
 * **Type**: [`material.pbrMetallicRoughness`](#reference-material-pbrmetallicroughness)
 * **Required**: No
 
-#### material.emissiveFactor
+### material.emissiveFactor
 
 The RGB components of the emissive color of the material. This is the detailed description of the property.
 
@@ -257,7 +249,7 @@ The RGB components of the emissive color of the material. This is the detailed d
    * Each element in the array must be greater than or equal to `0` and less than or equal to `1`.
 * **Required**: No, default: `[0,0,0]`
 
-#### material.alphaMode
+### material.alphaMode
 
 The material's alpha rendering mode enumeration specifying the interpretation of the alpha value of the main factor and texture.
 
@@ -268,7 +260,7 @@ The material's alpha rendering mode enumeration specifying the interpretation of
    * `"MASK"` The rendered output is either fully opaque or fully transparent depending on the alpha value and the specified alpha cutoff value.
    * `"BLEND"` The alpha value is used to composite the source and destination areas.
 
-#### material.alphaCutoff
+### material.alphaCutoff
 
 Specifies the cutoff threshold when in `MASK` mode. This is the detailed description of the property.
 
@@ -276,7 +268,7 @@ Specifies the cutoff threshold when in `MASK` mode. This is the detailed descrip
 * **Required**: No, default: `0.5`
 * **Minimum**: ` >= 0`
 
-#### material.doubleSided
+### material.doubleSided
 
 Specifies whether the material is double sided. This is the detailed description of the property.
 
@@ -288,7 +280,7 @@ Specifies whether the material is double sided. This is the detailed description
 
 ---------------------------------------
 <a name="reference-material-pbrmetallicroughness"></a>
-### Material PBR Metallic Roughness
+## Material PBR Metallic Roughness
 
 A set of parameter values that are used to define the metallic-roughness material model from Physically-Based Rendering (PBR) methodology.
 
@@ -306,7 +298,7 @@ Additional properties are allowed.
 
 * **JSON schema**: [material.pbrMetallicRoughness.schema.json](https://www.khronos.org/wetzel/just/testing/schema/material.pbrMetallicRoughness.schema.json)
 
-#### material.pbrMetallicRoughness.baseColorFactor
+### material.pbrMetallicRoughness.baseColorFactor
 
 The RGBA components of the base color of the material. This is the detailed description of the property.
 
@@ -314,7 +306,7 @@ The RGBA components of the base color of the material. This is the detailed desc
    * Each element in the array must be greater than or equal to `0` and less than or equal to `1`.
 * **Required**: No, default: `[1,1,1,1]`
 
-#### material.pbrMetallicRoughness.metallicFactor
+### material.pbrMetallicRoughness.metallicFactor
 
 The metalness of the material. This is the detailed description of the property.
 
@@ -323,7 +315,7 @@ The metalness of the material. This is the detailed description of the property.
 * **Minimum**: ` >= 0`
 * **Maximum**: ` <= 1`
 
-#### material.pbrMetallicRoughness.roughnessFactor
+### material.pbrMetallicRoughness.roughnessFactor
 
 The roughness of the material. This is the detailed description of the property.
 
@@ -332,7 +324,7 @@ The roughness of the material. This is the detailed description of the property.
 * **Minimum**: ` >= 0`
 * **Maximum**: ` <= 1`
 
-#### material.pbrMetallicRoughness.extensions
+### material.pbrMetallicRoughness.extensions
 
 Dictionary object with extension-specific objects.
 
@@ -340,7 +332,7 @@ Dictionary object with extension-specific objects.
 * **Required**: No
 * **Type of each property**: Extension
 
-#### material.pbrMetallicRoughness.extras
+### material.pbrMetallicRoughness.extras
 
 Application-specific data.
 
@@ -352,7 +344,7 @@ Application-specific data.
 
 ---------------------------------------
 <a name="reference-nestedtest"></a>
-### nestedTest
+## nestedTest
 
 The root object for a nestedTest asset.
 
@@ -372,35 +364,36 @@ Additional properties are allowed.
 
 * **JSON schema**: [nestedTest.schema.json](https://www.khronos.org/wetzel/just/testing/schema/nestedTest.schema.json)
 
-#### nestedTest.bufferViews &#x2705; 
+### nestedTest.bufferViews &#x2705; 
 
 An array of bufferViews.  This is the detailed description of the property.
 
 * **Type**: [`bufferView`](#reference-bufferview) `[1-*]`
 * **Required**: Yes
 
-#### nestedTest.materials
+### nestedTest.materials
 
 An array of materials.  This is the detailed description of the property.
 
 * **Type**: [`material`](#reference-material) `[1-*]`
 * **Required**: No
 
-#### nestedTest.images
+### nestedTest.images
 
 An array of images.  This is the detailed description of the property.
 
 * **Type**: [`image`](#reference-image) `[1-*]`
 * **Required**: No
 
-#### nestedTest.version
+### nestedTest.version
 
 A version string with a specific pattern.
 
 * **Type**: `string`
 * **Required**: No
+* **Pattern**: `^[0-9]+\.[0-9]+$`
 
-#### nestedTest.uri
+### nestedTest.uri
 
 A string that should reference a URI.  This is the detailed description of the property.
 
@@ -408,7 +401,7 @@ A string that should reference a URI.  This is the detailed description of the p
 * **Required**: No
 * **Format**: uriref
 
-#### nestedTest.extensions
+### nestedTest.extensions
 
 Dictionary object with extension-specific objects.
 
@@ -416,7 +409,7 @@ Dictionary object with extension-specific objects.
 * **Required**: No
 * **Type of each property**: Extension
 
-#### nestedTest.extras
+### nestedTest.extras
 
 Application-specific data.
 

@@ -1,10 +1,8 @@
-## Objects
-* [`example`](#reference-example) (root object)
 
 
 ---------------------------------------
 <a name="reference-example"></a>
-### example
+## example
 
 Example description.
 
@@ -19,7 +17,7 @@ Additional properties are not allowed.
 
 * **JSON schema**: [example.schema.json](https://www.khronos.org/wetzel/just/testing/schema/example.schema.json)
 
-#### example.byteOffset
+### example.byteOffset
 
 The offset relative to the start of the buffer in bytes.
 
@@ -27,7 +25,7 @@ The offset relative to the start of the buffer in bytes.
 * **Required**: No, default: `0`
 * **Minimum**: ` >= 0`
 
-#### example.type &#x2705; 
+### example.type &#x2705; 
 
 Specifies if the elements are scalars, vectors, or matrices.
 
