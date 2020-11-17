@@ -1,11 +1,11 @@
 = Objects
-* link:#reference-bufferview[`Buffer View`]
-* link:#reference-extension[`Extension`]
-* link:#reference-extras[`Extras`]
-* link:#reference-image[`Image`]
-* link:#reference-material[`Material`]
-** link:#reference-material-pbrmetallicroughness[`PBR Metallic Roughness`]
-* link:#reference-nestedtest[`nestedTest`] (root object)
+* <<reference-bufferview,`Buffer View`>>
+* <<reference-extension,`Extension`>>
+* <<reference-extras,`Extras`>>
+* <<reference-image,`Image`>>
+* <<reference-material,`Material`>>
+** <<reference-material-pbrmetallicroughness,`PBR Metallic Roughness`>>
+* <<reference-nestedtest,`nestedTest`>> (root object)
 
 
 '''
