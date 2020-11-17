@@ -36,12 +36,12 @@ A view into a buffer.
 |No
 
 |**extensions**
-|link:#reference-extension[`extension`]
+|<<reference-extension,`extension`>>
 |Dictionary object with extension-specific objects.
 |No
 
 |**extras**
-|link:#reference-extras[`extras`]
+|<<reference-extras,`extras`>>
 |Application-specific data.
 |No
 
@@ -99,7 +99,7 @@ The user-defined name of this object.  This is the detailed description of the p
 
 Dictionary object with extension-specific objects.
 
-* **Type**: link:#reference-extension[`extension`]
+* **Type**: <<reference-extension,`extension`>>
 * **Required**: No
 * **Type of each property**: Extension
 
@@ -107,7 +107,7 @@ Dictionary object with extension-specific objects.
 
 Application-specific data.
 
-* **Type**: link:#reference-extras[`extras`]
+* **Type**: <<reference-extras,`extras`>>
 * **Required**: No
 
 
@@ -172,12 +172,12 @@ Image data used to create a texture. Image can be referenced by URI or `bufferVi
 |No
 
 |**extensions**
-|link:#reference-extension[`extension`]
+|<<reference-extension,`extension`>>
 |Dictionary object with extension-specific objects.
 |No
 
 |**extras**
-|link:#reference-extras[`extras`]
+|<<reference-extras,`extras`>>
 |Application-specific data.
 |No
 
@@ -233,7 +233,7 @@ The user-defined name of this object.  This is the detailed description of the p
 
 Dictionary object with extension-specific objects.
 
-* **Type**: link:#reference-extension[`extension`]
+* **Type**: <<reference-extension,`extension`>>
 * **Required**: No
 * **Type of each property**: Extension
 
@@ -241,7 +241,7 @@ Dictionary object with extension-specific objects.
 
 Application-specific data.
 
-* **Type**: link:#reference-extras[`extras`]
+* **Type**: <<reference-extras,`extras`>>
 * **Required**: No
 
 
@@ -263,17 +263,17 @@ The material appearance of a primitive.
 |No
 
 |**extensions**
-|link:#reference-extension[`extension`]
+|<<reference-extension,`extension`>>
 |Dictionary object with extension-specific objects.
 |No
 
 |**extras**
-|link:#reference-extras[`extras`]
+|<<reference-extras,`extras`>>
 |Application-specific data.
 |No
 
 |**pbrMetallicRoughness**
-|link:#reference-material-pbrmetallicroughness[`material.pbrMetallicRoughness`]
+|<<reference-material-pbrmetallicroughness,`material.pbrMetallicRoughness`>>
 |A set of parameter values that are used to define the metallic-roughness material model from Physically-Based Rendering (PBR) methodology. When not specified, all the default values of `pbrMetallicRoughness` apply.
 |No
 
@@ -314,7 +314,7 @@ The user-defined name of this object.  This is the detailed description of the p
 
 Dictionary object with extension-specific objects.
 
-* **Type**: link:#reference-extension[`extension`]
+* **Type**: <<reference-extension,`extension`>>
 * **Required**: No
 * **Type of each property**: Extension
 
@@ -322,14 +322,14 @@ Dictionary object with extension-specific objects.
 
 Application-specific data.
 
-* **Type**: link:#reference-extras[`extras`]
+* **Type**: <<reference-extras,`extras`>>
 * **Required**: No
 
 === material.pbrMetallicRoughness
 
 A set of parameter values that are used to define the metallic-roughness material model from Physically-Based Rendering (PBR) methodology. When not specified, all the default values of `pbrMetallicRoughness` apply.
 
-* **Type**: link:#reference-material-pbrmetallicroughness[`material.pbrMetallicRoughness`]
+* **Type**: <<reference-material-pbrmetallicroughness,`material.pbrMetallicRoughness`>>
 * **Required**: No
 
 === material.emissiveFactor
@@ -395,12 +395,12 @@ A set of parameter values that are used to define the metallic-roughness materia
 |No, default: `1`
 
 |**extensions**
-|link:#reference-extension[`extension`]
+|<<reference-extension,`extension`>>
 |Dictionary object with extension-specific objects.
 |No
 
 |**extras**
-|link:#reference-extras[`extras`]
+|<<reference-extras,`extras`>>
 |Application-specific data.
 |No
 
@@ -440,7 +440,7 @@ The roughness of the material. This is the detailed description of the property.
 
 Dictionary object with extension-specific objects.
 
-* **Type**: link:#reference-extension[`extension`]
+* **Type**: <<reference-extension,`extension`>>
 * **Required**: No
 * **Type of each property**: Extension
 
@@ -448,7 +448,7 @@ Dictionary object with extension-specific objects.
 
 Application-specific data.
 
-* **Type**: link:#reference-extras[`extras`]
+* **Type**: <<reference-extras,`extras`>>
 * **Required**: No
 
 
@@ -465,17 +465,17 @@ The root object for a nestedTest asset.
 |   |Type|Description|Required
 
 |**bufferViews**
-|link:#reference-bufferview[`bufferView`] `[1-*]`
+|<<reference-bufferview,`bufferView`>> `[1-*]`
 |An array of bufferViews.
 | &#x2705; Yes
 
 |**materials**
-|link:#reference-material[`material`] `[1-*]`
+|<<reference-material,`material`>> `[1-*]`
 |An array of materials.
 |No
 
 |**images**
-|link:#reference-image[`image`] `[1-*]`
+|<<reference-image,`image`>> `[1-*]`
 |An array of images.
 |No
 
@@ -490,12 +490,12 @@ The root object for a nestedTest asset.
 |No
 
 |**extensions**
-|link:#reference-extension[`extension`]
+|<<reference-extension,`extension`>>
 |Dictionary object with extension-specific objects.
 |No
 
 |**extras**
-|link:#reference-extras[`extras`]
+|<<reference-extras,`extras`>>
 |Application-specific data.
 |No
 
@@ -509,21 +509,21 @@ Additional properties are allowed.
 
 An array of bufferViews.  This is the detailed description of the property.
 
-* **Type**: link:#reference-bufferview[`bufferView`] `[1-*]`
+* **Type**: <<reference-bufferview,`bufferView`>> `[1-*]`
 * **Required**: Yes
 
 === nestedTest.materials
 
 An array of materials.  This is the detailed description of the property.
 
-* **Type**: link:#reference-material[`material`] `[1-*]`
+* **Type**: <<reference-material,`material`>> `[1-*]`
 * **Required**: No
 
 === nestedTest.images
 
 An array of images.  This is the detailed description of the property.
 
-* **Type**: link:#reference-image[`image`] `[1-*]`
+* **Type**: <<reference-image,`image`>> `[1-*]`
 * **Required**: No
 
 === nestedTest.version
@@ -546,7 +546,7 @@ A string that should reference a URI.  This is the detailed description of the p
 
 Dictionary object with extension-specific objects.
 
-* **Type**: link:#reference-extension[`extension`]
+* **Type**: <<reference-extension,`extension`>>
 * **Required**: No
 * **Type of each property**: Extension
 
@@ -554,7 +554,7 @@ Dictionary object with extension-specific objects.
 
 Application-specific data.
 
-* **Type**: link:#reference-extras[`extras`]
+* **Type**: <<reference-extras,`extras`>>
 * **Required**: No
 
 
