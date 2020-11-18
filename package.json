@@ -1,6 +1,6 @@
 {
     "name": "wetzel",
-    "version": "0.1.0-dev.1.0",
+    "version": "0.1.0-dev.1.1",
     "description": "Generate Markdown or AsciiDoctor documentation from JSON Schema",
     "license": "Apache-2.0",
     "author": {
