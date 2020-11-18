@@ -4,7 +4,10 @@ Generate Markdown or AsciiDoctor documentation from JSON Schema
 
 * [Example](#Example)
 * [Getting Started](#Getting-Started)
+* [Command-Line Options](#Command-Line-Options)
+* [Common Usage](#Common-Usage)
 * [Limitations](#Limitations)
+* [Contributions](#Contributions)
 
 <a name="Example"></a>
 ## Example
@@ -36,7 +39,6 @@ This JSON Schema:
 
 is used to generate this Markdown documentation:
 
-# Objects
 * [`example`](#reference-example) (root object)
 
 
@@ -80,7 +82,6 @@ Specifies if the elements are scalars, vectors, or matrices.
 
 ---
 
-<a name="Getting-Started"></a>
 ## Getting Started
 
 Install [Node.js](https://nodejs.org/en/) if you don't already have it, clone this repo, and then:
@@ -107,7 +108,10 @@ Run the tests:
 npm run test
 ```
 
-Options:
+There's also a version [published on npm](https://www.npmjs.com/package/wetzel).
+
+## Command-Line Options
+
 * The `-l` option specifies the starting header level.
 * The `-p` option lets you specify the relative path that should be used when referencing the schema, relative to where you store the documentation.
 * The `-s` option lets you specify the path string that should be used when loading the schema reference paths.
@@ -118,7 +122,6 @@ Options:
 * The `-a` option will attempt to aggressively auto-link referenced type names in descriptions between each other.  If it's too agressive, you can add `=cqo` so that it only attempts to auto-link type names that are within "code-quotes only" (cqo) (e.g.: ``typeName``)
 * The `-i` option lets you specify an array of schema filenames that might be referenced by others, but shouldn't get their own documentation section.
 
-<a name="common-usage"></a>
 ## Common Usage
 
 The most common way to use this tool is to generate the entire glTF documentation.
@@ -139,7 +142,6 @@ be a Table of Contents entry for those types, nor will there be individual docum
 for those types (since they only exist to be referenced by other types to make type composition/authoring
 simpler and consistent).
 
-<a name="Limitations"></a>
 ## Limitations
 
 This tool was developed to generate reference documentaiton for the [glTF](https://github.com/KhronosGroup/glTF) schema.  As such, it currently only supports JSON Schema 3 and 4, and doesn't support the entire JSON Schema spec.  However, wetzel is easy to hack on, just edit [lib/generateMarkdown.js](lib/generateMarkdown.js).
@@ -152,5 +154,5 @@ Pull requests are appreciated!  Please use the same [Contributor License Agreeme
 
 Developed by the Cesium team and external contributors.
 <p align="center">
-<a href="http://cesiumjs.org/"><img src="doc/cesium.png" /></a>
+<a href="https://cesium.com/"><img src="doc/cesium.png" /></a>
 </p>
