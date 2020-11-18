@@ -1,6 +1,6 @@
 # wetzel
 
-Generate Markdown documentation from JSON Schema
+Generate Markdown or AsciiDoctor documentation from JSON Schema
 
 * [Example](#Example)
 * [Getting Started](#Getting-Started)

@@ -1,22 +1,22 @@
 {
     "name": "wetzel",
-    "version": "0.0.1",
-    "description": "Generate Markdown documentation from JSON Schema",
+    "version": "0.1.0-dev.1.0",
+    "description": "Generate Markdown or AsciiDoctor documentation from JSON Schema",
     "license": "Apache-2.0",
     "author": {
-        "name": "Patrick Cozzi",
-        "email": "pcozzi@agi.com",
+        "name": "Patrick Cozzi, Ed Mackey, Howard Wolosky, and other contributors",
         "url": "https://twitter.com/pjcozzi"
     },
     "main": "index.js",
     "keywords": [
         "json schema",
-        "markdown"
+        "markdown",
+        "asciidoctor"
     ],
     "homepage": "https://github.com/CesiumGS/wetzel",
     "repository": {
         "type": "git",
-        "url": "git@github.com:CesiumGS/wetzel.git"
+        "url": "https://github.com/CesiumGS/wetzel.git"
     },
     "bugs": {
         "url": "https://github.com/CesiumGS/wetzel/issues"
