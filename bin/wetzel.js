@@ -13,6 +13,7 @@ if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
         '  -l,  --headerLevel        Top-level header. Default: 1\n' +
         '  -p,  --schemaPath         The path string that should be used when generating the schema reference paths.\n' +
         '  -s,  --searchPath         The path string that should be used when loading the schema reference paths.\n' +
+        '  -e,  --embedOutput        The output path for a document that embeds JSON schemas directly (AsciiDoctor only).\n' +
         '  -m,  --outputMode         The output mode, Markdown (the default) or AsciiDoctor (a).' +
         '  -n,  --noTOC              Skip writing the Table of Contents.' +
         '  -a,  --autoLink           Aggressively auto-inter-link types referenced in descriptions.\n' +
@@ -60,7 +61,9 @@ if (defined(argv.s) || defined(argv.searchPath)) {
     searchPath.push(defaultValue(argv.s, argv.searchPath));
 }
 
-process.stdout.write(generateMarkdown({
+var embedOutput = defaultValue(defaultValue(argv.e, argv.embedOutput), null);
+
+var options = {
     schema: schema,
     filePath: filepath,
     fileName: path.basename(filepath),
@@ -69,8 +72,19 @@ process.stdout.write(generateMarkdown({
     writeTOC: !defaultValue(defaultValue(argv.n, argv.noTOC), false),
     headerLevel: defaultValue(defaultValue(argv.l, argv.headerLevel), 1),
     schemaRelativeBasePath: defaultValue(defaultValue(argv.p, argv.schemaPath), null),
+    embedMode: enums.embedMode.none,
     debug: defaultValue(defaultValue(argv.d, argv.debug), null),
     suppressWarnings: defaultValue(defaultValue(argv.w, argv.suppressWarnings), false),
     autoLink: autoLink,
     ignorableTypes: ignorableTypes
-}));
+};
+
+if (defined(embedOutput)) {
+    options.embedMode = enums.embedMode.writeIncludeStatements;
+    options.ignorableTypes = [];
+    fs.writeFileSync(embedOutput, generateMarkdown(options));
+    options.embedMode = enums.embedMode.referenceIncludeDocument;
+    options.ignorableTypes = ignorableTypes;
+}
+
+process.stdout.write(generateMarkdown(options));
