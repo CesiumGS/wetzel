@@ -1,0 +1,10 @@
+
+
+'''
+[#schema-reference-example]
+== JSON Schema for example
+
+[source,json]
+----
+include::schema/example.schema.json[]
+----
