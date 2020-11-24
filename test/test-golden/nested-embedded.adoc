@@ -71,7 +71,7 @@ include::schema/nestedID.schema.json[]
 
 
 '''
-[#schema-reference-nestedtestproperty]
+[#schema-reference-nestedtest]
 == JSON Schema for nestedTest
 
 [source,json]
