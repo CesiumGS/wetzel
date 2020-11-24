@@ -6,7 +6,7 @@
         "linked.adoc": "-l2 -a=cqo -m=a -p schema",
         "remote.md": "-n -a=cqo -p \"https://www.khronos.org/wetzel/just/testing/schema\"",
         "remote.adoc": "-n -a=cqo -m=a -p \"https://www.khronos.org/wetzel/just/testing/schema\"",
-        "embed.adoc,embedded.adoc": "-n -a=cqo -m=a -p schema -e {EMBED}"
+        "embed.adoc,embedJSON.adoc": "-n -a=cqo -m=a -p schema -e {EMBED}"
     },
     "schemas": [{
         "name": "example",

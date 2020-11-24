@@ -73,7 +73,7 @@ describe('wetzel', function () {
 
                     if (names.length > 1) {
                         // Embed test
-                        it('should match embedded golden ' + outputName, function () {
+                        it('should match embedded golden ' + embedOutputName, function () {
                             let embedOutputText = fs.readFileSync(embedOutputPathName).toString();
                             assert.ok(embedOutputText.length > 1);
                             let embedGoldenText = fs.readFileSync(embedGoldenPathName).toString();
