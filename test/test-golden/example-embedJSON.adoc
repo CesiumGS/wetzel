@@ -1,6 +1,5 @@
 
 
-'''
 [#schema-reference-example]
 == JSON Schema for example
 
@@ -8,3 +7,5 @@
 ----
 include::schema/example.schema.json[]
 ----
+
+<<<
