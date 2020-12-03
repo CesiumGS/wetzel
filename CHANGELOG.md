@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.1.0-dev.1.4 - 2020-12-03
+
+* Changed the "required" checkmark to be more subtle. [#54](https://github.com/CesiumGS/wetzel/pull/54)
+
 ### 0.1.0-dev.1.3 - 2020-11-24
 
 * Changed boundary between JSON schemas from horizontal rule to page break. [#52](https://github.com/CesiumGS/wetzel/issues/52)
