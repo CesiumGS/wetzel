@@ -11,6 +11,7 @@ var generateMarkdown = require('../lib/generateMarkdown');
 if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
     var help = 'Usage: node ' + path.basename(__filename) + ' [path-to-json-schema-file] [OPTIONS]\n' +
         '  -l,  --headerLevel        Top-level header. Default: 1\n' +
+        '  -c,  --checkmark          Symbol for required properties. Default: &#10003;\n' +
         '  -p,  --schemaPath         The path string that should be used when generating the schema reference paths.\n' +
         '  -s,  --searchPath         The path string that should be used when loading the schema reference paths.\n' +
         '  -e,  --embedOutput        The output path for a document that embeds JSON schemas directly (AsciiDoctor only).\n' +
@@ -71,6 +72,7 @@ var options = {
     styleMode: styleModeArgument,
     writeTOC: !defaultValue(defaultValue(argv.n, argv.noTOC), false),
     headerLevel: defaultValue(defaultValue(argv.l, argv.headerLevel), 1),
+    checkmark: defaultValue(defaultValue(argv.c, argv.checkmark), null),
     schemaRelativeBasePath: defaultValue(defaultValue(argv.p, argv.schemaPath), null),
     embedMode: enums.embedMode.none,
     debug: defaultValue(defaultValue(argv.d, argv.debug), null),

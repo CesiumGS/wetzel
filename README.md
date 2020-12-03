@@ -53,7 +53,7 @@ Example description.
 |   |Type|Description|Required|
 |---|---|---|---|
 |**byteOffset**|`integer`|The offset relative to the start of the buffer in bytes.|No, default: `0`|
-|**type**|`string`|Specifies if the elements are scalars, vectors, or matrices.| &check; Yes|
+|**type**|`string`|Specifies if the elements are scalars, vectors, or matrices.| &#10003; Yes|
 
 Additional properties are not allowed.
 
@@ -70,7 +70,7 @@ The offset relative to the start of the buffer in bytes.
 Specifies if the elements are scalars, vectors, or matrices.
 
 * **Type**: `string`
-* **Required**: Yes
+* **Required**:  &#10003; Yes
 * **Allowed values**:
    * `"SCALAR"`
    * `"VEC2"`
@@ -113,6 +113,7 @@ There's also a version [published on npm](https://www.npmjs.com/package/wetzel).
 ## Command-Line Options
 
 * The `-l` option specifies the starting header level.
+* The `-c` option lets you specify a custom symbol to place in front of required properties.
 * The `-p` option lets you specify the relative path that should be used when referencing the schema, relative to where you store the documentation.
 * The `-s` option lets you specify the path string that should be used when loading the schema reference paths.
 * The `-e` option writes an additional output file that embeds the full text of JSON schemas (AsciiDoctor mode only).
