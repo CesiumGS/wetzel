@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.1.0-dev.1.5 - 2020-12-03
+
+* Added a new option to configure the "required" checkmark. [#55](https://github.com/CesiumGS/wetzel/pull/55)
+
 ### 0.1.0-dev.1.4 - 2020-12-03
 
 * Changed the "required" checkmark to be more subtle. [#54](https://github.com/CesiumGS/wetzel/pull/54)
