@@ -11,7 +11,7 @@ A view into a buffer.
 |   |Type|Description|Required|
 |---|---|---|---|
 |**byteOffset**|`integer`|The offset into the buffer in bytes.|No, default: `0`|
-|**byteLength**|`integer`|The length of the bufferView in bytes.| &check; Yes|
+|**byteLength**|`integer`|The length of the bufferView in bytes.| &#10003; Yes|
 |**byteStride**|`integer`|The stride, in bytes.|No|
 |**target**|`integer`|This is a test of some enums.|No|
 |**name**|`string`|The user-defined name of this object.|No|
@@ -35,7 +35,7 @@ The offset into the buffer in bytes.
 The length of the bufferView in bytes.
 
 * **Type**: `integer`
-* **Required**: Yes
+* **Required**:  &#10003; Yes
 * **Minimum**: ` >= 1`
 
 ### bufferView.byteStride
@@ -352,7 +352,7 @@ The root object for a nestedTest asset.
 
 |   |Type|Description|Required|
 |---|---|---|---|
-|**bufferViews**|[`bufferView`](#reference-bufferview) `[1-*]`|An array of bufferViews.| &check; Yes|
+|**bufferViews**|[`bufferView`](#reference-bufferview) `[1-*]`|An array of bufferViews.| &#10003; Yes|
 |**materials**|[`material`](#reference-material) `[1-*]`|An array of materials.|No|
 |**images**|[`image`](#reference-image) `[1-*]`|An array of images.|No|
 |**version**|`string`|A version string with a specific pattern.|No|
@@ -369,7 +369,7 @@ Additional properties are allowed.
 An array of bufferViews.  This is the detailed description of the property.
 
 * **Type**: [`bufferView`](#reference-bufferview) `[1-*]`
-* **Required**: Yes
+* **Required**:  &#10003; Yes
 
 ### nestedTest.materials
 

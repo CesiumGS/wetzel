@@ -3,7 +3,7 @@
         "simple.md": "",
         "simple.adoc": "-m=a",
         "linked.md": "-l2 -a=cqo -p schema",
-        "linked.adoc": "-l2 -a=cqo -m=a -p schema",
+        "linked.adoc": "-l2 -a=cqo -m=a -p schema --checkmark \"icon:check[]\"",
         "remote.md": "-n -a=cqo -p \"https://www.khronos.org/wetzel/just/testing/schema\"",
         "remote.adoc": "-n -a=cqo -m=a -p \"https://www.khronos.org/wetzel/just/testing/schema\"",
         "embed.adoc,embedJSON.adoc": "-n -a=cqo -m=a -p schema -e {EMBED}"

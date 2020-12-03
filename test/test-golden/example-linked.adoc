@@ -20,7 +20,7 @@ Example description.
 |**type**
 |`string`
 |Specifies if the elements are scalars, vectors, or matrices.
-| &check; Yes
+| icon:check[] Yes
 
 |===
 
@@ -41,7 +41,7 @@ The offset relative to the start of the buffer in bytes.
 Specifies if the elements are scalars, vectors, or matrices.
 
 * **Type**: `string`
-* **Required**: Yes
+* **Required**:  icon:check[] Yes
 * **Allowed values**:
 ** `"SCALAR"`
 ** `"VEC2"`
