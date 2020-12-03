@@ -13,7 +13,7 @@ Example description.
 |   |Type|Description|Required|
 |---|---|---|---|
 |**byteOffset**|`integer`|The offset relative to the start of the buffer in bytes.|No, default: `0`|
-|**type**|`string`|Specifies if the elements are scalars, vectors, or matrices.| &#x2705; Yes|
+|**type**|`string`|Specifies if the elements are scalars, vectors, or matrices.| &check; Yes|
 
 Additional properties are not allowed.
 
@@ -25,7 +25,7 @@ The offset relative to the start of the buffer in bytes.
 * **Required**: No, default: `0`
 * **Minimum**: ` >= 0`
 
-### example.type &#x2705; 
+### example.type
 
 Specifies if the elements are scalars, vectors, or matrices.
 
