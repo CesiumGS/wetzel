@@ -20,7 +20,7 @@ Example description.
 |**type**
 |`string`
 |Specifies if the elements are scalars, vectors, or matrices.
-| &#x2705; Yes
+| &check; Yes
 
 |===
 
@@ -36,7 +36,7 @@ The offset relative to the start of the buffer in bytes.
 * **Required**: No, default: `0`
 * **Minimum**: `&gt;= 0`
 
-==== example.type &#x2705; 
+==== example.type
 
 Specifies if the elements are scalars, vectors, or matrices.
 

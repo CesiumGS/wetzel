@@ -26,7 +26,7 @@ A view into a buffer.
 |**byteLength**
 |`integer`
 |The length of the bufferView in bytes.
-| &#x2705; Yes
+| &check; Yes
 
 |**byteStride**
 |`integer`
@@ -65,7 +65,7 @@ The offset into the buffer in bytes.
 * **Required**: No, default: `0`
 * **Minimum**: `&gt;= 0`
 
-=== bufferView.byteLength &#x2705; 
+=== bufferView.byteLength
 
 The length of the bufferView in bytes.
 
@@ -465,7 +465,7 @@ The root object for a nestedTest asset.
 |**bufferViews**
 |`bufferView` `[1-*]`
 |An array of bufferViews.
-| &#x2705; Yes
+| &check; Yes
 
 |**materials**
 |`material` `[1-*]`
@@ -501,7 +501,7 @@ The root object for a nestedTest asset.
 
 Additional properties are allowed.
 
-=== nestedTest.bufferViews &#x2705; 
+=== nestedTest.bufferViews
 
 An array of bufferViews.  This is the detailed description of the property.
 
