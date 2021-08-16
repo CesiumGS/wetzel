@@ -114,6 +114,7 @@ There's also a version [published on npm](https://www.npmjs.com/package/wetzel).
 
 * The `-l` option specifies the starting header level.
 * The `-c` option lets you specify a custom symbol to place in front of required properties.
+* The `-k` option replaces the word `must` with a specified keyword, such as `**MUST**`.
 * The `-p` option lets you specify the relative path that should be used when referencing the schema, relative to where you store the documentation.
 * The `-s` option lets you specify the path string that should be used when loading the schema reference paths.
 * The `-e` option writes an additional output file that embeds the full text of JSON schemas (AsciiDoctor mode only).
