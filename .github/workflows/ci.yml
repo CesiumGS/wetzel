@@ -1,0 +1,32 @@
+name: wetzel tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+env:
+  CI: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Git Checkout
+      uses: actions/checkout@v2
+
+    - name: NPM Install
+      run: |
+        npm install
+
+    - name: Run tests
+      run: |
+        npm run test
+
+    - name: Upload Results
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-outputs
+        path: |
+          test/test-output/**
