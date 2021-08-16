@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.2.0 - 2021-08-16
+
+* Added a new option to configure a keyword for "must" in hard-coded descriptions. [#57](https://github.com/CesiumGS/wetzel/pull/57)
+
 ### 0.1.0-dev.1.5 - 2020-12-03
 
 * Added a new option to configure the "required" checkmark. [#55](https://github.com/CesiumGS/wetzel/pull/55)
