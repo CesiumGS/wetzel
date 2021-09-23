@@ -16,5 +16,8 @@
         "name": "nested",
         "path": "nested/nestedTest.schema.json",
         "ignore": "['nestedid.schema.json', 'nestedchildofrootproperty.schema.json', 'nestedtestproperty.schema.json']"
+    }, {
+        "name": "v2020-12",
+        "path": "v2020-12/image.schema.json"
     }]
 }

@@ -1,0 +1,11 @@
+
+
+[#schema-reference-image]
+== JSON Schema for Image
+
+[source,json]
+----
+include::schema/image.schema.json[]
+----
+
+<<<
