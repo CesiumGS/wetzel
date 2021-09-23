@@ -16,6 +16,7 @@ Image data used to create a texture. Image **MAY** be referenced by an URI (or I
 |**mimeType**|`string`|The image's media type. This field **MUST** be defined when `bufferView` is defined.|No|
 |**bufferView**|`integer`|The index of the bufferView that contains the image. This field **MUST NOT** be defined when `uri` is defined.|No|
 |**fraction**|`number`|A number that **MUST** be between zero and one.|No|
+|**moreFractions**|`number` `[3]`|An array of three fractional numbers.|No, default: `[0.1,0.2,0.3]`|
 
 Additional properties are allowed.
 
@@ -55,5 +56,13 @@ A number that **MUST** be between zero and one.
 * **Required**: No
 * **Minimum**: ` > 0`
 * **Maximum**: ` < 1`
+
+#### Image.moreFractions
+
+An array of three fractional numbers.
+
+* **Type**: `number` `[3]`
+   * Each element in the array must be greater than `0` and less than `1`.
+* **Required**: No, default: `[0.1,0.2,0.3]`
 
 

@@ -36,6 +36,18 @@
             "description": "A number that **MUST** be between zero and one.",
             "exclusiveMinimum": 0.0,
             "exclusiveMaximum": 1.0
+        },
+        "moreFractions" : {
+            "type" : "array",
+            "description" : "An array of three fractional numbers.",
+            "items" : {
+                "type": "number",
+                "exclusiveMinimum" : 0.0,
+                "exclusiveMaximum" : 1.0
+            },
+            "minItems" : 3,
+            "maxItems" : 3,
+            "default" : [0.1, 0.2, 0.3]
         }
     },
     "dependencies": {
