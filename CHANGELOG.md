@@ -1,6 +1,6 @@
 # Change Log
 
-### 0.2.2 - UNRELEASED
+### 0.2.2 - 2021-09-23
 
 * Added support for certain features of newer JSON schema drafts. [#59](https://github.com/CesiumGS/wetzel/pull/59)
 
