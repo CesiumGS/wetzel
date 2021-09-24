@@ -2,20 +2,23 @@
 
 Generate Markdown or AsciiDoctor documentation from JSON Schema
 
-* [Example](#Example)
-* [Getting Started](#Getting-Started)
-* [Command-Line Options](#Command-Line-Options)
-* [Common Usage](#Common-Usage)
-* [Limitations](#Limitations)
-* [Contributions](#Contributions)
+* [Purpose and Limitations](#purpose-and-limitations)
+* [Example](#example)
+* [Getting Started](#getting-started)
+* [Command-Line Options](#command-line-options)
+* [Common Usage](#common-usage)
+* [Contributions](#contributions)
 
-<a name="Example"></a>
+## Purpose and Limitations
+
+This tool was developed to generate reference documentaiton for the [glTF](https://github.com/KhronosGroup/glTF) schema.  As such, it doesn't support the entire JSON Schema spec, only what is needed by the glTF schema.  Currently it accepts JSON Schema drafts 3, 4, 7, and 2020-12.
+
 ## Example
 
 This JSON Schema:
 ```json
 {
-    "$schema" : "http://json-schema.org/draft-03/schema",
+    "$schema" : "https://json-schema.org/draft/2020-12/schema",
     "title" : "example",
     "type" : "object",
     "description" : "Example description.",
@@ -29,15 +32,15 @@ This JSON Schema:
         "type" : {
             "type" : "string",
             "description" : "Specifies if the elements are scalars, vectors, or matrices.",
-            "enum" : ["SCALAR", "VEC2", "VEC3", "VEC4", "MAT2", "MAT3", "MAT4"],
-            "required" : true
+            "enum" : ["SCALAR", "VEC2", "VEC3", "VEC4", "MAT2", "MAT3", "MAT4"]
         }
     },
+    "required" : ["type"],
     "additionalProperties" : false
 }
 ```
 
-is used to generate this Markdown documentation:
+can be used to generate this Markdown documentation:
 
 * [`example`](#reference-example) (root object)
 
@@ -85,7 +88,7 @@ Specifies if the elements are scalars, vectors, or matrices.
 ## Getting Started
 
 Install [Node.js](https://nodejs.org/en/) if you don't already have it, clone this repo, and then:
-```
+```sh
 cd wetzel
 npm install
 ```
@@ -94,17 +97,17 @@ Run `node bin/wetzel.js` and pass it the path to a file with a JSON Schema, and 
 It is useful to pipe the Markdown output to the clipboard and then paste into a temporary GitHub issue for testing.
 
 On Mac:
-```
+```sh
 wetzel ../glTF/specification/2.0/schema/accessor.schema.json -l 2 | pbcopy
 ```
 
 On Windows:
-```
+```sh
 wetzel.js ../glTF/specification/2.0/schema/accessor.schema.json -l 2 | clip
 ```
 
 Run the tests:
-```
+```sh
 npm run test
 ```
 
@@ -127,27 +130,49 @@ There's also a version [published on npm](https://www.npmjs.com/package/wetzel).
 
 ## Common Usage
 
-The most common way to use this tool is to generate the entire glTF documentation.
-To do that, you simply need to pass-in the root schema file (glTF.schema.json):
+This tool is used to generate the [glTF Properties Reference](https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#properties-reference) section and the [JSON Schema Reference Appendix](https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#appendix-a-json-schema-reference) of the glTF specification, using the [glTF JSON Schema files](https://github.com/KhronosGroup/glTF/tree/main/specification/2.0/schema) as its input data.
 
+The process is initiated from a GitHub Action in the glTF repository ([`CI.yml`](https://github.com/KhronosGroup/glTF/blob/main/.github/workflows/CI.yml)).  This action runs glTF's [`Makefile`](https://github.com/KhronosGroup/glTF/blob/main/specification/2.0/Makefile).  The `Makefile` calls wetzel with a command similar to the following:
+
+```sh
+~/bin/wetzel.js \
+    -n -a=cqo -m=a \
+    -p "schema" \
+    -e "JsonSchemaReference.adoc" \
+    -i '["gltfchildofrootproperty.schema.json", "gltfid.schema.json", "gltfproperty.schema.json"]' \
+    -c "icon:check[]" \
+    -k "**MUST**" \
+    schema/glTF.schema.json > PropertiesReference.adoc
 ```
-wetzel ../glTF/specification/2.0/schema/gltf.schema.json -l 2 -p schema/ -i "['gltfid.schema.json', 'gltfchildofrootproperty.schema.json', 'gltfproperty.schema.json']" -a | clip
+
+This will read `schema/glTF.schema.json` and all referenced sub-schemas, and produce two different output files:
+
+- `PropertiesReference.adoc` - This becomes the [glTF Properties Reference](https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#properties-reference) section.
+
+- `JsonSchemaReference.adoc` - This becomes the [JSON Schema Reference Appendix](https://www.khronos.org/registry/glTF/specs/2.0/glTF-2.0.html#appendix-a-json-schema-reference).
+
+These files are then included into glTF's [`Specification.adoc`](https://github.com/KhronosGroup/glTF/blob/main/specification/2.0/Specification.adoc) using AsciiDoc include commands:
+
+```adoc
+[[properties-reference]]
+= Properties Reference
+
+// Generated with wetzel
+include::PropertiesReference.adoc[]
 ```
 
-That will generate documentation for glTF.schema.json, as well as all referenced schemas,
-all in a single set of markdown with inter-type linking.  By specifying the `-p` parameter,
-you've indicated where the actual json schema files will live relative to the documentation
-so that the type documentation can directly link to the type json file. By specifying the
-`-a` parameter, it will aggressively attempt to auto-link all referenced type names with each other.
+and later:
 
-By specifying the `-i` property and that array of filenames, you are ensuring that there won't
-be a Table of Contents entry for those types, nor will there be individual documentation sections
-for those types (since they only exist to be referenced by other types to make type composition/authoring
-simpler and consistent).
+```adoc
+[appendix]
+[[appendix-a-json-schema-reference]]
+= JSON Schema Reference (Informative)
 
-## Limitations
+// Generated with wetzel
+include::JsonSchemaReference.adoc[]
+```
 
-This tool was developed to generate reference documentaiton for the [glTF](https://github.com/KhronosGroup/glTF) schema.  As such, it currently only supports JSON Schema 3 and 4, and doesn't support the entire JSON Schema spec.  However, wetzel is easy to hack on, just edit [lib/generateMarkdown.js](lib/generateMarkdown.js).
+Finally, the `Makefile` uses `asciidoctor` to convert `Specification.adoc` and its included, generated documentation, into HTML and PDF forms of the final glTF specification document, which are then posted to the [glTF Registry](https://www.khronos.org/registry/glTF/).
 
 ## Contributions
 
