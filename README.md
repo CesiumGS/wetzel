@@ -11,7 +11,7 @@ Generate Markdown or AsciiDoctor documentation from JSON Schema
 
 ## Purpose and Limitations
 
-This tool was developed to generate reference documentaiton for the [glTF](https://github.com/KhronosGroup/glTF) schema.  As such, it doesn't support the entire JSON Schema spec, only what is needed by the glTF schema.  Currently it accepts JSON Schema drafts 3, 4, 7, and 2020-12.
+This tool was developed to generate reference documentation for the [glTF](https://github.com/KhronosGroup/glTF) schema.  As such, it doesn't support the entire JSON Schema spec, only what is needed by the glTF schema.  Currently it accepts JSON Schema drafts 3, 4, 7, and 2020-12.
 
 ## Example
 
@@ -125,7 +125,7 @@ There's also a version [published on npm](https://www.npmjs.com/package/wetzel).
 * The `-n` option will skip writing a Table of Contents.
 * The `-w` option will suppress any warnings about potential documentation problems that wetzel normally prints by default.
 * The `-d` option lets you specify the root filename that will be used for writing intermediate wetzel artifacts that are useful when doing wetzel development.
-* The `-a` option will attempt to aggressively auto-link referenced type names in descriptions between each other.  If it's too agressive, you can add `=cqo` so that it only attempts to auto-link type names that are within "code-quotes only" (cqo) (e.g.: ``typeName``)
+* The `-a` option will attempt to aggressively auto-link referenced type names in descriptions between each other.  If it's too aggressive, you can add `=cqo` so that it only attempts to auto-link type names that are within "code-quotes only" (cqo) (e.g.: ``typeName``)
 * The `-i` option lets you specify an array of schema filenames that might be referenced by others, but shouldn't get their own documentation section.
 
 ## Common Usage
