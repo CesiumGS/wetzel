@@ -4,7 +4,7 @@
 * [`Extras`](#reference-extras)
 * [`Image`](#reference-image)
 * [`Material`](#reference-material)
-   * [`PBR Metallic Roughness`](#reference-material-pbrmetallicroughness)
+    * [`PBR Metallic Roughness`](#reference-material-pbrmetallicroughness)
 * [`nestedTest`](#reference-nestedtest) (root object)
 
 
@@ -61,8 +61,8 @@ This is a test of some enums.
 * **Type**: `integer`
 * **Required**: No
 * **Allowed values**:
-   * `34962` ARRAY_BUFFER
-   * `34963` ELEMENT_ARRAY_BUFFER
+    * `34962` ARRAY_BUFFER
+    * `34963` ELEMENT_ARRAY_BUFFER
 * **Related WebGL functions**: `bindBuffer()`
 
 ### bufferView.name
@@ -146,8 +146,8 @@ The image's MIME type. Required if `bufferView` is defined.
 * **Type**: `string`
 * **Required**: No
 * **Allowed values**:
-   * `"image/jpeg"`
-   * `"image/png"`
+    * `"image/jpeg"`
+    * `"image/png"`
 
 ### image.bufferView
 
@@ -246,7 +246,7 @@ A set of parameter values that are used to define the metallic-roughness materia
 The RGB components of the emissive color of the material. This is the detailed description of the property.
 
 * **Type**: `number` `[3]`
-   * Each element in the array **MUST** be greater than or equal to `0` and less than or equal to `1`.
+    * Each element in the array **MUST** be greater than or equal to `0` and less than or equal to `1`.
 * **Required**: No, default: `[0,0,0]`
 
 ### material.alphaMode
@@ -256,9 +256,9 @@ The material's alpha rendering mode enumeration specifying the interpretation of
 * **Type**: `string`
 * **Required**: No, default: `"OPAQUE"`
 * **Allowed values**:
-   * `"OPAQUE"` The alpha value is ignored and the rendered output is fully opaque.
-   * `"MASK"` The rendered output is either fully opaque or fully transparent depending on the alpha value and the specified alpha cutoff value.
-   * `"BLEND"` The alpha value is used to composite the source and destination areas.
+    * `"OPAQUE"` The alpha value is ignored and the rendered output is fully opaque.
+    * `"MASK"` The rendered output is either fully opaque or fully transparent depending on the alpha value and the specified alpha cutoff value.
+    * `"BLEND"` The alpha value is used to composite the source and destination areas.
 
 ### material.alphaCutoff
 
@@ -301,7 +301,7 @@ Additional properties are allowed.
 The RGBA components of the base color of the material. This is the detailed description of the property.
 
 * **Type**: `number` `[4]`
-   * Each element in the array **MUST** be greater than or equal to `0` and less than or equal to `1`.
+    * Each element in the array **MUST** be greater than or equal to `0` and less than or equal to `1`.
 * **Required**: No, default: `[1,1,1,1]`
 
 ### material.pbrMetallicRoughness.metallicFactor

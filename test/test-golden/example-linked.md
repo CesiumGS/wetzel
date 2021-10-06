@@ -34,12 +34,12 @@ Specifies if the elements are scalars, vectors, or matrices.
 * **Type**: `string`
 * **Required**:  &#10003; Yes
 * **Allowed values**:
-   * `"SCALAR"`
-   * `"VEC2"`
-   * `"VEC3"`
-   * `"VEC4"`
-   * `"MAT2"`
-   * `"MAT3"`
-   * `"MAT4"`
+    * `"SCALAR"`
+    * `"VEC2"`
+    * `"VEC3"`
+    * `"VEC4"`
+    * `"MAT2"`
+    * `"MAT3"`
+    * `"MAT4"`
 
 
