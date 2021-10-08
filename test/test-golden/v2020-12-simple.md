@@ -35,8 +35,8 @@ The image's media type. This field **MUST** be defined when `bufferView` is defi
 * **Type**: `string`
 * **Required**: No
 * **Allowed values**:
-   * `"image/jpeg"`
-   * `"image/png"`
+    * `"image/jpeg"`
+    * `"image/png"`
 
 ### Image.bufferView
 
@@ -60,7 +60,7 @@ A number that **MUST** be between zero and one.
 An array of three fractional numbers.
 
 * **Type**: `number` `[3]`
-   * Each element in the array must be greater than `0` and less than `1`.
+    * Each element in the array must be greater than `0` and less than `1`.
 * **Required**: No, default: `[0.1,0.2,0.3]`
 
 
