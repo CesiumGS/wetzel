@@ -69,5 +69,8 @@ An array of three fractional numbers.
 * **Type**: `number` `[3]`
     * Each element in the array must be greater than `0` and less than `1`.
 * **Required**: No, default: `[0.1,0.2,0.3]`
+* **Examples**:
+    * `[  1.3,  4.03,  42]`
+    * `[  18,  0.1,  1.1]`
 
 
