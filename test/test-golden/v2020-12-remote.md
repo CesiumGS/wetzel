@@ -27,6 +27,8 @@ The URI (or IRI) of the image.  Relative paths are relative to the current glTF 
 * **Type**: `string`
 * **Required**: No
 * **Format**: iri-reference
+* **Examples**:
+    * `"https://raw.githubusercontent.com/KhronosGroup/glTF/main/specification/figures/gltf.png"`
 
 ### Image.mimeType
 
@@ -45,6 +47,9 @@ The index of the bufferView that contains the image. This field **MUST NOT** be 
 * **Type**: `integer`
 * **Required**: No
 * **Minimum**: ` >= 0`
+* **Examples**:
+    * `3`
+    * `0`
 
 ### Image.fraction
 
