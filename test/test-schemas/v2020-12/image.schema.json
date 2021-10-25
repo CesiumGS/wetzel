@@ -10,7 +10,10 @@
             "description": "The URI (or IRI) of the image.",
             "format": "iri-reference",
             "gltf_detailedDescription": "The URI (or IRI) of the image.  Relative paths are relative to the current glTF asset.  Instead of referencing an external file, this field **MAY** contain a `data:`-URI. This field **MUST NOT** be defined when `bufferView` is defined.",
-            "gltf_uriType": "image"
+            "gltf_uriType": "image",
+            "examples": [
+                "https://raw.githubusercontent.com/KhronosGroup/glTF/main/specification/figures/gltf.png"
+            ]
         },
         "mimeType": {
             "anyOf": [
@@ -29,7 +32,8 @@
         "bufferView": {
             "type": "integer",
             "minimum": 0,
-            "description": "The index of the bufferView that contains the image. This field **MUST NOT** be defined when `uri` is defined."
+            "description": "The index of the bufferView that contains the image. This field **MUST NOT** be defined when `uri` is defined.",
+            "examples": [3, 0]
         },
         "fraction": {
             "type": "number",
@@ -47,7 +51,11 @@
             },
             "minItems" : 3,
             "maxItems" : 3,
-            "default" : [0.1, 0.2, 0.3]
+            "default" : [0.1, 0.2, 0.3],
+            "examples": [
+                [1.3, 4.03, 42.0],
+                [18.0, 0.1, 1.1]
+            ]
         }
     },
     "dependencies": {
@@ -56,5 +64,16 @@
     "oneOf": [
         { "required": [ "uri" ] },
         { "required": [ "bufferView" ] }
+    ],
+    "examples": [
+        {
+            "uri": "https://raw.githubusercontent.com/KhronosGroup/glTF/main/specification/figures/gltf.png",
+            "mimeType": "image/png"
+        },
+        {
+            "bufferView": 2,
+            "fraction": 0.3,
+            "moreFractions": [1.1, 2.2, 3.3]
+        }
     ]
 }
