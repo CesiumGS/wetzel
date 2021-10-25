@@ -95,7 +95,7 @@ An array of three fractional numbers.
 ** `[18, 0.1, 1.1]`
 
 
-====Examples
+==== Examples
 
 ** `{"uri": "https://raw.githubusercontent.com/KhronosGroup/glTF/main/specification/figures/gltf.png", "mimeType": "image/png"}`
 ** `{"bufferView": 2, "fraction": 0.3, "moreFractions": [  1.1,  2.2,  3.3 ]}`
