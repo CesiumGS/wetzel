@@ -1,6 +1,6 @@
 # Change Log
 
-### 0.2.3 - UNRELEASED
+### 0.2.3 - 2021-10-26
 
 * Added support for "Examples". [#63](https://github.com/CesiumGS/wetzel/pull/63)
 * Fixed Markdown unordered lists to indent 4 spaces. [#62](https://github.com/CesiumGS/wetzel/pull/62)
