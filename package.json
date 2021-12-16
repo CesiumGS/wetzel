@@ -1,6 +1,6 @@
 {
     "name": "wetzel",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "Generate Markdown or AsciiDoctor documentation from JSON Schema",
     "license": "Apache-2.0",
     "author": {
@@ -26,8 +26,8 @@
         "lib": "./lib"
     },
     "dependencies": {
-        "jsonpointer": "^4.1.0",
-        "minimist": "1.1.0"
+        "jsonpointer": "^5.0.0",
+        "minimist": "^1.2.2"
     },
     "devDependencies": {
         "eslint": "^7.10.0",
