@@ -58,6 +58,22 @@
             ]
         }
     },
+    "patternProperties": {
+        "^(?:rgb|hex|hsl|rgba|hsla)Color": {
+            "type": "string",
+            "description": "The background color for the image",
+            "examples": [
+                "rgb(255, 99, 71)",
+                "#ff6347",
+                "hsl(9, 100%, 64%)"
+            ]
+        },
+        "^(?:height|width)$": {
+            "type": "string",
+            "description": "A dimension for the image",
+            "examples": ["10", "400px"]
+        }
+    },
     "dependencies": {
         "bufferView": [ "mimeType" ]
     },
