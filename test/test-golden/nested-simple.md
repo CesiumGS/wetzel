@@ -26,8 +26,7 @@ A view into a buffer.
 |**extensions**|`extension`|Dictionary object with extension-specific objects.|No|
 |**extras**|`extras`|Application-specific data.|No|
 
-Additional properties are allowed.
-
+* **Additional properties are not allowed.**
 ### bufferView.byteOffset
 
 The offset into the buffer in bytes.
@@ -78,7 +77,8 @@ Dictionary object with extension-specific objects.
 
 * **Type**: `extension`
 * **Required**: No
-* **Type of each property**: Extension
+* **Additional properties are allowed.**
+* **Type of each property**: `object`
 
 ### bufferView.extras
 
@@ -96,8 +96,8 @@ Application-specific data.
 
 Dictionary object with extension-specific objects.
 
-Additional properties are allowed.
-
+* **Additional properties are allowed.**
+* **Type of additional properties**: `object`
 
 
 
@@ -129,8 +129,7 @@ Image data used to create a texture. Image can be referenced by URI or `bufferVi
 |**extensions**|`extension`|Dictionary object with extension-specific objects.|No|
 |**extras**|`extras`|Application-specific data.|No|
 
-Additional properties are allowed.
-
+* **Additional properties are not allowed.**
 ### image.uri
 
 The uri of the image.  This is the detailed description of the property.
@@ -179,7 +178,8 @@ Dictionary object with extension-specific objects.
 
 * **Type**: `extension`
 * **Required**: No
-* **Type of each property**: Extension
+* **Additional properties are allowed.**
+* **Type of each property**: `object`
 
 ### image.extras
 
@@ -210,8 +210,7 @@ The material appearance of a primitive.
 |**alphaCutoff**|`number`|The alpha cutoff value of the material.|No, default: `0.5`|
 |**doubleSided**|`boolean`|Specifies whether the material is double sided.|No, default: `false`|
 
-Additional properties are allowed.
-
+* **Additional properties are not allowed.**
 ### material.name
 
 The user-defined name of this object.  This is the detailed description of the property.
@@ -225,7 +224,8 @@ Dictionary object with extension-specific objects.
 
 * **Type**: `extension`
 * **Required**: No
-* **Type of each property**: Extension
+* **Additional properties are allowed.**
+* **Type of each property**: `object`
 
 ### material.extras
 
@@ -294,8 +294,7 @@ A set of parameter values that are used to define the metallic-roughness materia
 |**extensions**|`extension`|Dictionary object with extension-specific objects.|No|
 |**extras**|`extras`|Application-specific data.|No|
 
-Additional properties are allowed.
-
+* **Additional properties are not allowed.**
 ### material.pbrMetallicRoughness.baseColorFactor
 
 The RGBA components of the base color of the material. This is the detailed description of the property.
@@ -328,7 +327,8 @@ Dictionary object with extension-specific objects.
 
 * **Type**: `extension`
 * **Required**: No
-* **Type of each property**: Extension
+* **Additional properties are allowed.**
+* **Type of each property**: `object`
 
 ### material.pbrMetallicRoughness.extras
 
@@ -358,8 +358,7 @@ The root object for a nestedTest asset.
 |**extensions**|`extension`|Dictionary object with extension-specific objects.|No|
 |**extras**|`extras`|Application-specific data.|No|
 
-Additional properties are allowed.
-
+* **Additional properties are not allowed.**
 ### nestedTest.bufferViews
 
 An array of bufferViews.  This is the detailed description of the property.
@@ -403,7 +402,8 @@ Dictionary object with extension-specific objects.
 
 * **Type**: `extension`
 * **Required**: No
-* **Type of each property**: Extension
+* **Additional properties are allowed.**
+* **Type of each property**: `object`
 
 ### nestedTest.extras
 

@@ -18,8 +18,7 @@ Image data used to create a texture. Image **MAY** be referenced by an URI (or I
 |**fraction**|`number`|A number that **MUST** be between zero and one.|No|
 |**moreFractions**|`number` `[3]`|An array of three fractional numbers.|No, default: `[0.1,0.2,0.3]`|
 
-Additional properties are allowed.
-
+* **Additional properties are not allowed.**
 * **JSON schema**: [image.schema.json](schema/image.schema.json)
 
 #### Image.uri

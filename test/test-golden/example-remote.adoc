@@ -22,8 +22,7 @@ Example description.
 
 |===
 
-Additional properties are not allowed.
-
+* **Additional properties are not allowed.**
 * **JSON schema**: link:https://www.khronos.org/wetzel/just/testing/schema/example.schema.json[example.schema.json]
 
 === example.byteOffset

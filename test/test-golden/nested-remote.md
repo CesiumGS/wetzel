@@ -18,8 +18,7 @@ A view into a buffer.
 |**extensions**|[`extension`](#reference-extension)|Dictionary object with extension-specific objects.|No|
 |**extras**|[`extras`](#reference-extras)|Application-specific data.|No|
 
-Additional properties are allowed.
-
+* **Additional properties are not allowed.**
 * **JSON schema**: [bufferView.schema.json](https://www.khronos.org/wetzel/just/testing/schema/bufferView.schema.json)
 
 ### bufferView.byteOffset
@@ -72,7 +71,8 @@ Dictionary object with extension-specific objects.
 
 * **Type**: [`extension`](#reference-extension)
 * **Required**: No
-* **Type of each property**: Extension
+* **Additional properties are allowed.**
+* **Type of each property**: `object`
 
 ### bufferView.extras
 
@@ -90,8 +90,8 @@ Application-specific data.
 
 Dictionary object with extension-specific objects.
 
-Additional properties are allowed.
-
+* **Additional properties are allowed.**
+* **Type of additional properties**: `object`
 * **JSON schema**: [extension.schema.json](https://www.khronos.org/wetzel/just/testing/schema/extension.schema.json)
 
 
@@ -125,8 +125,7 @@ Image data used to create a texture. Image can be referenced by URI or `bufferVi
 |**extensions**|[`extension`](#reference-extension)|Dictionary object with extension-specific objects.|No|
 |**extras**|[`extras`](#reference-extras)|Application-specific data.|No|
 
-Additional properties are allowed.
-
+* **Additional properties are not allowed.**
 * **JSON schema**: [image.schema.json](https://www.khronos.org/wetzel/just/testing/schema/image.schema.json)
 
 ### image.uri
@@ -177,7 +176,8 @@ Dictionary object with extension-specific objects.
 
 * **Type**: [`extension`](#reference-extension)
 * **Required**: No
-* **Type of each property**: Extension
+* **Additional properties are allowed.**
+* **Type of each property**: `object`
 
 ### image.extras
 
@@ -208,8 +208,7 @@ The material appearance of a primitive.
 |**alphaCutoff**|`number`|The alpha cutoff value of the material.|No, default: `0.5`|
 |**doubleSided**|`boolean`|Specifies whether the material is double sided.|No, default: `false`|
 
-Additional properties are allowed.
-
+* **Additional properties are not allowed.**
 * **JSON schema**: [material.schema.json](https://www.khronos.org/wetzel/just/testing/schema/material.schema.json)
 
 ### material.name
@@ -225,7 +224,8 @@ Dictionary object with extension-specific objects.
 
 * **Type**: [`extension`](#reference-extension)
 * **Required**: No
-* **Type of each property**: Extension
+* **Additional properties are allowed.**
+* **Type of each property**: `object`
 
 ### material.extras
 
@@ -294,8 +294,7 @@ A set of parameter values that are used to define the metallic-roughness materia
 |**extensions**|[`extension`](#reference-extension)|Dictionary object with extension-specific objects.|No|
 |**extras**|[`extras`](#reference-extras)|Application-specific data.|No|
 
-Additional properties are allowed.
-
+* **Additional properties are not allowed.**
 * **JSON schema**: [material.pbrMetallicRoughness.schema.json](https://www.khronos.org/wetzel/just/testing/schema/material.pbrMetallicRoughness.schema.json)
 
 ### material.pbrMetallicRoughness.baseColorFactor
@@ -330,7 +329,8 @@ Dictionary object with extension-specific objects.
 
 * **Type**: [`extension`](#reference-extension)
 * **Required**: No
-* **Type of each property**: Extension
+* **Additional properties are allowed.**
+* **Type of each property**: `object`
 
 ### material.pbrMetallicRoughness.extras
 
@@ -360,8 +360,7 @@ The root object for a nestedTest asset.
 |**extensions**|[`extension`](#reference-extension)|Dictionary object with extension-specific objects.|No|
 |**extras**|[`extras`](#reference-extras)|Application-specific data.|No|
 
-Additional properties are allowed.
-
+* **Additional properties are not allowed.**
 * **JSON schema**: [nestedTest.schema.json](https://www.khronos.org/wetzel/just/testing/schema/nestedTest.schema.json)
 
 ### nestedTest.bufferViews
@@ -407,7 +406,8 @@ Dictionary object with extension-specific objects.
 
 * **Type**: [`extension`](#reference-extension)
 * **Required**: No
-* **Type of each property**: Extension
+* **Additional properties are allowed.**
+* **Type of each property**: `object`
 
 ### nestedTest.extras
 

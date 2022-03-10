@@ -37,8 +37,7 @@ Image data used to create a texture. Image **MAY** be referenced by an URI (or I
 
 |===
 
-Additional properties are allowed.
-
+* **Additional properties are not allowed.**
 * **JSON schema**: <<schema-reference-image,`image.schema.json`>>
 
 === Image.uri

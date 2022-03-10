@@ -22,8 +22,7 @@ Example description.
 
 |===
 
-Additional properties are not allowed.
-
+* **Additional properties are not allowed.**
 * **JSON schema**: <<schema-reference-example,`example.schema.json`>>
 
 === example.byteOffset
