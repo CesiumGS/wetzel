@@ -47,7 +47,7 @@ A view into a buffer.
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: link:https://www.khronos.org/wetzel/just/testing/schema/bufferView.schema.json[bufferView.schema.json]
 
 === bufferView.byteOffset
@@ -183,7 +183,7 @@ Image data used to create a texture. Image can be referenced by URI or `bufferVi
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: link:https://www.khronos.org/wetzel/just/testing/schema/image.schema.json[image.schema.json]
 
 === image.uri
@@ -299,7 +299,7 @@ The material appearance of a primitive.
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: link:https://www.khronos.org/wetzel/just/testing/schema/material.schema.json[material.schema.json]
 
 === material.name
@@ -406,7 +406,7 @@ A set of parameter values that are used to define the metallic-roughness materia
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: link:https://www.khronos.org/wetzel/just/testing/schema/material.pbrMetallicRoughness.schema.json[material.pbrMetallicRoughness.schema.json]
 
 === material.pbrMetallicRoughness.baseColorFactor
@@ -501,7 +501,7 @@ The root object for a nestedTest asset.
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: link:https://www.khronos.org/wetzel/just/testing/schema/nestedTest.schema.json[nestedTest.schema.json]
 
 === nestedTest.bufferViews

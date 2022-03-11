@@ -18,7 +18,7 @@ A view into a buffer.
 |**extensions**|[`extension`](#reference-extension)|Dictionary object with extension-specific objects.|No|
 |**extras**|[`extras`](#reference-extras)|Application-specific data.|No|
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: [bufferView.schema.json](https://www.khronos.org/wetzel/just/testing/schema/bufferView.schema.json)
 
 ### bufferView.byteOffset
@@ -125,7 +125,7 @@ Image data used to create a texture. Image can be referenced by URI or `bufferVi
 |**extensions**|[`extension`](#reference-extension)|Dictionary object with extension-specific objects.|No|
 |**extras**|[`extras`](#reference-extras)|Application-specific data.|No|
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: [image.schema.json](https://www.khronos.org/wetzel/just/testing/schema/image.schema.json)
 
 ### image.uri
@@ -208,7 +208,7 @@ The material appearance of a primitive.
 |**alphaCutoff**|`number`|The alpha cutoff value of the material.|No, default: `0.5`|
 |**doubleSided**|`boolean`|Specifies whether the material is double sided.|No, default: `false`|
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: [material.schema.json](https://www.khronos.org/wetzel/just/testing/schema/material.schema.json)
 
 ### material.name
@@ -294,7 +294,7 @@ A set of parameter values that are used to define the metallic-roughness materia
 |**extensions**|[`extension`](#reference-extension)|Dictionary object with extension-specific objects.|No|
 |**extras**|[`extras`](#reference-extras)|Application-specific data.|No|
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: [material.pbrMetallicRoughness.schema.json](https://www.khronos.org/wetzel/just/testing/schema/material.pbrMetallicRoughness.schema.json)
 
 ### material.pbrMetallicRoughness.baseColorFactor
@@ -360,7 +360,7 @@ The root object for a nestedTest asset.
 |**extensions**|[`extension`](#reference-extension)|Dictionary object with extension-specific objects.|No|
 |**extras**|[`extras`](#reference-extras)|Application-specific data.|No|
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: [nestedTest.schema.json](https://www.khronos.org/wetzel/just/testing/schema/nestedTest.schema.json)
 
 ### nestedTest.bufferViews

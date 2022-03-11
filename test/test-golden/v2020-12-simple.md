@@ -19,7 +19,7 @@ Image data used to create a texture. Image **MAY** be referenced by an URI (or I
 |**moreFractions**|`number` `[3]`|An array of three fractional numbers.|No, default: `[0.1,0.2,0.3]`|
 |**metadata**|`object`||No|
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 ### Image.uri
 
 The URI (or IRI) of the image.  Relative paths are relative to the current glTF asset.  Instead of referencing an external file, this field **MAY** contain a `data:`-URI. This field **MUST NOT** be defined when `bufferView` is defined.
@@ -109,7 +109,7 @@ A random piece of image metadata
 |**key**|`string`|| &#10003; Yes|
 |**val**|`string`|| &#10003; Yes|
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 ### meta.key
 
 * **Type**: `string`

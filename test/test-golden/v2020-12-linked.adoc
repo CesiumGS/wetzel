@@ -44,7 +44,7 @@ Image data used to create a texture. Image **MAY** be referenced by an URI (or I
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: link:schema/image.schema.json[image.schema.json]
 
 ==== Image.uri
@@ -145,7 +145,7 @@ A random piece of image metadata
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: link:schema/meta.schema.json[meta.schema.json]
 
 ==== meta.key

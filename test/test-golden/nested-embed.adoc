@@ -47,7 +47,7 @@ A view into a buffer.
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: <<schema-reference-bufferview,`bufferView.schema.json`>>
 
 === bufferView.byteOffset
@@ -183,7 +183,7 @@ Image data used to create a texture. Image can be referenced by URI or `bufferVi
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: <<schema-reference-image,`image.schema.json`>>
 
 === image.uri
@@ -299,7 +299,7 @@ The material appearance of a primitive.
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: <<schema-reference-material,`material.schema.json`>>
 
 === material.name
@@ -406,7 +406,7 @@ A set of parameter values that are used to define the metallic-roughness materia
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: <<schema-reference-material-pbrmetallicroughness,`material.pbrMetallicRoughness.schema.json`>>
 
 === material.pbrMetallicRoughness.baseColorFactor
@@ -501,7 +501,7 @@ The root object for a nestedTest asset.
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: <<schema-reference-nestedtest,`nestedTest.schema.json`>>
 
 === nestedTest.bufferViews

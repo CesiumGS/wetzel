@@ -55,7 +55,7 @@ A view into a buffer.
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 === bufferView.byteOffset
 
 The offset into the buffer in bytes.
@@ -187,7 +187,7 @@ Image data used to create a texture. Image can be referenced by URI or `bufferVi
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 === image.uri
 
 The uri of the image.  This is the detailed description of the property.
@@ -301,7 +301,7 @@ The material appearance of a primitive.
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 === material.name
 
 The user-defined name of this object.  This is the detailed description of the property.
@@ -406,7 +406,7 @@ A set of parameter values that are used to define the metallic-roughness materia
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 === material.pbrMetallicRoughness.baseColorFactor
 
 The RGBA components of the base color of the material. This is the detailed description of the property.
@@ -499,7 +499,7 @@ The root object for a nestedTest asset.
 
 |===
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 === nestedTest.bufferViews
 
 An array of bufferViews.  This is the detailed description of the property.

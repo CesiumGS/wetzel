@@ -19,7 +19,7 @@ Image data used to create a texture. Image **MAY** be referenced by an URI (or I
 |**moreFractions**|`number` `[3]`|An array of three fractional numbers.|No, default: `[0.1,0.2,0.3]`|
 |**metadata**|`object`||No|
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: [image.schema.json](schema/image.schema.json)
 
 #### Image.uri
@@ -111,7 +111,7 @@ A random piece of image metadata
 |**key**|`string`|| &#10003; Yes|
 |**val**|`string`|| &#10003; Yes|
 
-* **Additional properties are not allowed.**
+* **Additional properties are allowed.**
 * **JSON schema**: [meta.schema.json](schema/meta.schema.json)
 
 #### meta.key
