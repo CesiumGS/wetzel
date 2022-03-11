@@ -16,6 +16,7 @@ Example description.
 |**type**|`string`|Specifies if the elements are scalars, vectors, or matrices.| &#10003; Yes|
 
 * **Additional properties are not allowed.**
+
 ### example.byteOffset
 
 The offset relative to the start of the buffer in bytes.

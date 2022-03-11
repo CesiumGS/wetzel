@@ -27,6 +27,7 @@ A view into a buffer.
 |**extras**|`extras`|Application-specific data.|No|
 
 * **Additional properties are allowed.**
+
 ### bufferView.byteOffset
 
 The offset into the buffer in bytes.
@@ -101,6 +102,7 @@ Dictionary object with extension-specific objects.
 
 
 
+
 ---------------------------------------
 <a name="reference-extras"></a>
 ## Extras
@@ -130,6 +132,7 @@ Image data used to create a texture. Image can be referenced by URI or `bufferVi
 |**extras**|`extras`|Application-specific data.|No|
 
 * **Additional properties are allowed.**
+
 ### image.uri
 
 The uri of the image.  This is the detailed description of the property.
@@ -211,6 +214,7 @@ The material appearance of a primitive.
 |**doubleSided**|`boolean`|Specifies whether the material is double sided.|No, default: `false`|
 
 * **Additional properties are allowed.**
+
 ### material.name
 
 The user-defined name of this object.  This is the detailed description of the property.
@@ -295,6 +299,7 @@ A set of parameter values that are used to define the metallic-roughness materia
 |**extras**|`extras`|Application-specific data.|No|
 
 * **Additional properties are allowed.**
+
 ### material.pbrMetallicRoughness.baseColorFactor
 
 The RGBA components of the base color of the material. This is the detailed description of the property.
@@ -359,6 +364,7 @@ The root object for a nestedTest asset.
 |**extras**|`extras`|Application-specific data.|No|
 
 * **Additional properties are allowed.**
+
 ### nestedTest.bufferViews
 
 An array of bufferViews.  This is the detailed description of the property.

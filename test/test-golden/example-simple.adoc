@@ -25,6 +25,7 @@ Example description.
 |===
 
 * **Additional properties are not allowed.**
+
 === example.byteOffset
 
 The offset relative to the start of the buffer in bytes.
