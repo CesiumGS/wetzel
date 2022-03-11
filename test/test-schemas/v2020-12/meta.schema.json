@@ -8,5 +8,9 @@
         "key": { "type": "string" },
         "val": { "type": "string"}
     },
-    "required": ["key", "val"]
+    "required": ["key", "val"],
+    "additionalProperties": { "type": "string" },
+    "propertyNames": {
+        "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+    }
 }

@@ -110,6 +110,10 @@ A random piece of image metadata
 |**val**|`string`|| &#10003; Yes|
 
 * **Additional properties are allowed.**
+* **Type of additional properties**: `string`
+* **Property names**:
+    * **Pattern**: `^[A-Za-z_][A-Za-z0-9_]*$`
+
 * **JSON schema**: [meta.schema.json](https://www.khronos.org/wetzel/just/testing/schema/meta.schema.json)
 
 ### meta.key
