@@ -26,7 +26,9 @@ if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
         '  -d,  --debug              Provide a path, and this will save out intermediate processing\n' +
         '                                artifacts useful in debugging wetzel.\n' +
         '  -w,  --suppressWarnings   Will not print out WETZEL_WARNING strings indicating identified\n' +
-        '                                conversion problems. Default: false\n';
+        '                                conversion problems. Default: false\n' +
+        '  --describeEnums            List enum values in the description column of the summary table. Default: false\n' +
+        '  --summary                 Only write the summary and skip the detailed section, useful for a more concise documentation. Default: false\n'
     process.stdout.write(help);
     return;
 }
@@ -80,7 +82,9 @@ var options = {
     debug: defaultValue(defaultValue(argv.d, argv.debug), null),
     suppressWarnings: defaultValue(defaultValue(argv.w, argv.suppressWarnings), false),
     autoLink: autoLink,
-    ignorableTypes: ignorableTypes
+    ignorableTypes: ignorableTypes,
+    describeEnums: defaultValue(argv.describeEnums, false),
+    summaryOnly: defaultValue(argv.summary, false)
 };
 
 if (defined(embedOutput)) {
