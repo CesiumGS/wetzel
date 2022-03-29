@@ -74,7 +74,7 @@ var options = {
     searchPath: searchPath,
     styleMode: styleModeArgument,
     writeTOC: !defaultValue(defaultValue(argv.n, argv.noTOC), false),
-    headerLevel: defaultValue(defaultValue(argv.l, argv.headerLevel), 1),
+    headerLevel: parseInt(defaultValue(defaultValue(argv.l, argv.headerLevel), 1)),
     checkmark: defaultValue(defaultValue(argv.c, argv.checkmark), null),
     mustKeyword: defaultValue(defaultValue(argv.k, argv.keyword), null),
     schemaRelativeBasePath: defaultValue(defaultValue(argv.p, argv.schemaPath), null),
