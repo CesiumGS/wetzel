@@ -15,6 +15,7 @@ if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
         '  -k,  --keyword            Use a particular keyword in place of "must", for example "**MUST**".\n' +
         '  -p,  --schemaPath         The path string that should be used when generating the schema reference paths.\n' +
         '  -s,  --searchPath         The path string that should be used when loading the schema reference paths.\n' +
+        '  -S,  --searchPaths        An array of path strings that should be used when loading the schema reference paths.\n' +
         '  -e,  --embedOutput        The output path for a document that embeds JSON schemas directly (AsciiDoctor only).\n' +
         '  -m,  --outputMode         The output mode, Markdown (the default) or AsciiDoctor (a).\n' +
         '  -n,  --noTOC              Skip writing the Table of Contents.\n' +
@@ -29,6 +30,30 @@ if (!defined(argv._[0]) || defined(argv.h) || defined(argv.help)) {
         '                                conversion problems. Default: false\n';
     process.stdout.write(help);
     return;
+}
+
+/**
+ * Parse an string that represents an array of file paths, and create
+ * an array of strings with these file paths, taking different forms
+ * of single- or double quotes into account.
+ * 
+ * We're expecting users to pass in an array as a "string", but we aren't expecting them
+ * to pass it in as a correctly JSON-escaped string.  Therefore, we need to replace single
+ * or double-quotes with a backslash-double-quote, and then we can parse the object.
+ * 
+ * If the given argument is undefined, then an empty array will be returned.
+ * 
+ * @param {String} pathsArrayString The string 
+ * @returns The array 
+ */
+function parsePathsArray(pathsArrayString) {
+    if (!defined(pathsArrayString)) {
+        return [];
+    }
+    let escapedPathsArrayString = pathsArrayString.replace(/'/g, '\"');
+    escapedPathsArrayString = escapedPathsArrayString.replace(/"/g, '\"');
+    const pathsArray = JSON.parse(escapedPathsArrayString);
+    return pathsArray;
 }
 
 var filepath = argv._[0];
@@ -50,17 +75,16 @@ if (styleModeArgument === 'a' || styleModeArgument === '=a') {
     styleModeArgument = enums.styleModeOption.AsciiDoctor;
 }
 
-// We're expecting users to pass in an array as a "string", but we aren't expecting them
-// to pass it in as a correctly JSON-escaped string.  Therefore, we need to replace single
-// or double-quotes with a backslash-double-quote, and then we can parse the object.
-var ignorableTypesString = defaultValue(argv.i, '[]');
-ignorableTypesString = ignorableTypesString.replace(/'/g, '\"');
-ignorableTypesString = ignorableTypesString.replace(/"/g, '\"');
-var ignorableTypes = JSON.parse(ignorableTypesString);
+var ignorableTypes = parsePathsArray(argv.i);
 
-var searchPath = ['', path.dirname(filepath)];
+var searchPaths = ['', path.dirname(filepath)];
 if (defined(argv.s) || defined(argv.searchPath)) {
-    searchPath.push(defaultValue(argv.s, argv.searchPath));
+    searchPaths.push(defaultValue(argv.s, argv.searchPath));
+}
+if (defined(argv.S) || defined(argv.searchPaths)) {
+    const additionalSearchPathsString = defaultValue(argv.S, argv.searchPaths);
+    const additionalSearchPaths = parsePathsArray(additionalSearchPathsString);
+    searchPaths = searchPaths.concat(additionalSearchPaths);
 }
 
 var embedOutput = defaultValue(defaultValue(argv.e, argv.embedOutput), null);
@@ -69,7 +93,7 @@ var options = {
     schema: schema,
     filePath: filepath,
     fileName: path.basename(filepath),
-    searchPath: searchPath,
+    searchPaths: searchPaths,
     styleMode: styleModeArgument,
     writeTOC: !defaultValue(defaultValue(argv.n, argv.noTOC), false),
     headerLevel: defaultValue(defaultValue(argv.l, argv.headerLevel), 1),
