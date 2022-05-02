@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Circular references",
+  "description": "An example schema with circular references",
+  "type": "object",
+  "definitions": {
+    "node": {
+      "title": "A node, either a leaf node or an inner node",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/leafNode"
+        },
+        {
+          "$ref": "#/definitions/innerNode"
+        }
+      ]
+    },
+    "leafNode": {
+      "title": "A leaf node",
+      "type": "object"
+    },
+    "innerNode": {
+      "title": "An inner node with children",
+      "type": "object",
+      "properties": {
+        "children": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/node"
+          }
+        }
+      }
+    }
+  },
+  "properties": {
+    "root": {
+      "allOf": [{ "$ref": "#/definitions/node" }]
+    }
+  }
+}

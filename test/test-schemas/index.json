@@ -13,6 +13,12 @@
         "name": "example",
         "path": "example/example.schema.json"
     }, {
+        "name": "definitions",
+        "path": "definitions/definitions.schema.json"
+    }, {
+        "name": "circular",
+        "path": "circular/circular.schema.json"
+    },{
         "name": "nested",
         "path": "nested/nestedTest.schema.json",
         "ignore": "['nestedid.schema.json', 'nestedchildofrootproperty.schema.json', 'nestedtestproperty.schema.json']"

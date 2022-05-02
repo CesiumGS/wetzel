@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Definitions example",
+  "description": "An example with definitions",
+  "type": "object",
+  "definitions": {
+    "exampleDefinition": {
+      "title": "An example definition",
+      "type": "string"
+    },
+    "exampleReferenceDefinition": {
+      "title": "An example definition that refers to another one",
+      "allOf": [
+        {
+          "$ref": "#/definitions/exampleDefinition"
+        }
+      ]
+    }
+  }
+}

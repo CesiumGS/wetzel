@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Definitions user example",
+  "description": "An example that uses definitions from another file",
+  "type": "object",
+  "properties": {
+    "exampleProperty": {
+      "allOf": [
+        {
+          "$ref": "definitions.schema.json#/definitions/exampleReferenceDefinition"
+        }
+      ]
+    }
+  }
+}
