@@ -18,6 +18,9 @@
     }, {
         "name": "circular",
         "path": "circular/circular.schema.json"
+    }, {
+        "name": "circularSimple",
+        "path": "circularSimple/circularSimple.schema.json"
     },{
         "name": "nested",
         "path": "nested/nestedTest.schema.json",

@@ -1,0 +1,15 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "circularSimple.schema.json",
+    "title": "Circular Simple",
+    "description": "A schema that references itself",
+    "type": "object",
+    "properties": {
+        "children": {
+            "type": "array",
+            "items": {
+                "$ref": "circularSimple.schema.json"
+            }
+        }
+    }
+}
