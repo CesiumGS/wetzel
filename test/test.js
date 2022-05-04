@@ -49,10 +49,10 @@ describe('wetzel', function () {
                     let embedOutputName = schema.name + '-' + (names[1] || '');
                     let embedOutputPathName = path.join(OUT_PREFIX, embedOutputName);
                     let embedGoldenPathName = path.join(GOLDEN_PREFIX, embedOutputName);
-
+                    let additionalOptions = schema.additionalOptions ? schema.additionalOptions : '';
                     it('should generate ' + outputName, function (done) {
                         const options = index.options[option].replace('{EMBED}', embedOutputPathName);
-                        const cmd = `${WETZEL_BIN} ${options} ${ignore} ${inputPathName} > ${outputPathName}`;
+                        const cmd = `${WETZEL_BIN} ${options} ${additionalOptions} ${ignore} ${inputPathName} > ${outputPathName}`;
                         exec(cmd, (error) => {
                             if (error) {
                                 console.error('** ERROR ** ' + error);

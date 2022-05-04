@@ -19,5 +19,13 @@
     }, {
         "name": "v2020-12",
         "path": "v2020-12/image.schema.json"
+    }, {
+        "name": "singleSearchPath",
+        "path": "searchPaths/singleSearchPath.schema.json",
+        "additionalOptions": "-s \"test/test-schemas/searchPaths/subdirectoryA\""
+    }, {
+        "name": "multipleSearchPaths",
+        "path": "searchPaths/multipleSearchPaths.schema.json",
+        "additionalOptions": "-S \"[ 'test/test-schemas/searchPaths/subdirectoryA', 'test/test-schemas/searchPaths/subdirectoryB' ]\""
     }]
 }

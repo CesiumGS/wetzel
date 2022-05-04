@@ -120,6 +120,7 @@ There's also a version [published on npm](https://www.npmjs.com/package/wetzel).
 * The `-k` option replaces the word `must` with a specified keyword, such as `**MUST**`.
 * The `-p` option lets you specify the relative path that should be used when referencing the schema, relative to where you store the documentation.
 * The `-s` option lets you specify the path string that should be used when loading the schema reference paths.
+* The `-S` option lets you specify an array of path strings that should be used when loading the schema reference paths.
 * The `-e` option writes an additional output file that embeds the full text of JSON schemas (AsciiDoctor mode only).
 * The `-m` option controls the output style mode. The default is `Markdown`, use `-m=a` for `AsciiDoctor` mode.
 * The `-n` option will skip writing a Table of Contents.
