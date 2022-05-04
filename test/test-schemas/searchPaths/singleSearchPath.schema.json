@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "singleSearchPath.schema.json",
+  "title": "SingleSearchPath",
+  "type": "object",
+  "description": "A schema that refers to a schema in a different path",
+  "properties": {
+    "examplePropertyA": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "searchPathsExternalA.schema.json"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "searchPathsExternalA.schema.json",
+    "title": "SearchPaths external A",
+    "type": "object",
+    "description": "A schema that is referred to by another one"
+}

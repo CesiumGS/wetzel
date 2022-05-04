@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "multipleSearchPaths.schema.json",
+  "title": "MultipleSearchPaths",
+  "type": "object",
+  "description": "A schema that refers to schemas in different paths",
+  "properties": {
+    "examplePropertyA": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "searchPathsExternalA.schema.json"
+        }
+      ]
+    },
+    "examplePropertyB": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "searchPathsExternalB.schema.json"
+        }
+      ]
+    }
+  }
+}

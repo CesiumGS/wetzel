@@ -1,0 +1,33 @@
+
+
+[#schema-reference-multiplesearchpaths]
+== JSON Schema for MultipleSearchPaths
+
+[source,json]
+----
+include::schema/multipleSearchPaths.schema.json[]
+----
+
+<<<
+
+
+[#schema-reference-searchpathsexternala]
+== JSON Schema for SearchPaths external A
+
+[source,json]
+----
+include::schema/searchPathsExternalA.schema.json[]
+----
+
+<<<
+
+
+[#schema-reference-searchpathsexternalb]
+== JSON Schema for SearchPaths external B
+
+[source,json]
+----
+include::schema/searchPathsExternalB.schema.json[]
+----
+
+<<<

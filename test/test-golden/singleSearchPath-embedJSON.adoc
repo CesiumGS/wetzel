@@ -1,0 +1,22 @@
+
+
+[#schema-reference-searchpathsexternala]
+== JSON Schema for SearchPaths external A
+
+[source,json]
+----
+include::schema/searchPathsExternalA.schema.json[]
+----
+
+<<<
+
+
+[#schema-reference-singlesearchpath]
+== JSON Schema for SingleSearchPath
+
+[source,json]
+----
+include::schema/singleSearchPath.schema.json[]
+----
+
+<<<

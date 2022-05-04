@@ -1,0 +1,73 @@
+== Objects
+* <<reference-multiplesearchpaths,`MultipleSearchPaths`>> (root object)
+* <<reference-searchpathsexternala,`SearchPaths external A`>>
+* <<reference-searchpathsexternalb,`SearchPaths external B`>>
+
+
+'''
+[#reference-multiplesearchpaths]
+=== MultipleSearchPaths
+
+A schema that refers to schemas in different paths
+
+.`MultipleSearchPaths` Properties
+|===
+|   |Type|Description|Required
+
+|**examplePropertyA**
+|<<reference-searchpathsexternala,`searchPathsExternalA`>>
+|A schema that is referred to by another one
+|No
+
+|**examplePropertyB**
+|<<reference-searchpathsexternalb,`searchPathsExternalB`>>
+|A schema that is referred to by another one
+|No
+
+|===
+
+Additional properties are allowed.
+
+* **JSON schema**: link:schema/multipleSearchPaths.schema.json[multipleSearchPaths.schema.json]
+
+==== MultipleSearchPaths.examplePropertyA
+
+A schema that is referred to by another one
+
+* **Type**: <<reference-searchpathsexternala,`searchPathsExternalA`>>
+* **Required**: No
+
+==== MultipleSearchPaths.examplePropertyB
+
+A schema that is referred to by another one
+
+* **Type**: <<reference-searchpathsexternalb,`searchPathsExternalB`>>
+* **Required**: No
+
+
+
+
+'''
+[#reference-searchpathsexternala]
+=== SearchPaths external A
+
+A schema that is referred to by another one
+
+Additional properties are allowed.
+
+* **JSON schema**: link:schema/searchPathsExternalA.schema.json[searchPathsExternalA.schema.json]
+
+
+
+
+'''
+[#reference-searchpathsexternalb]
+=== SearchPaths external B
+
+A schema that is referred to by another one
+
+Additional properties are allowed.
+
+* **JSON schema**: link:schema/searchPathsExternalB.schema.json[searchPathsExternalB.schema.json]
+
+
