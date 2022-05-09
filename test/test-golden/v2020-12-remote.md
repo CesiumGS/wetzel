@@ -15,9 +15,9 @@ Image data used to create a texture. Image **MAY** be referenced by an URI (or I
 |**bufferView**|`integer`|The index of the bufferView that contains the image. This field **MUST NOT** be defined when `uri` is defined.|No|
 |**fraction**|`number`|A number that **MUST** be between zero and one.|No|
 |**moreFractions**|`number` `[3]`|An array of three fractional numbers.|No, default: `[0.1,0.2,0.3]`|
+|**metadata**|`object`||No|
 
-Additional properties are allowed.
-
+* **Additional properties are allowed.**
 * **JSON schema**: [image.schema.json](https://www.khronos.org/wetzel/just/testing/schema/image.schema.json)
 
 ### Image.uri
@@ -71,8 +71,59 @@ An array of three fractional numbers.
     * `[1.3, 4.03, 42]`
     * `[18, 0.1, 1.1]`
 
+### Image.metadata
+
+* **Type**: `object`
+* **Required**: No
+* **Additional properties are allowed.**
+* **Type of each property**: [`meta`](#reference-meta)
+* **Property names**:
+    * **Pattern**: `^[A-Za-z_][A-Za-z0-9_]*$`
+    * **Minimum Length**`: >= 3`
+    * **Maximum Length**`: <= 10`
+    * **Allowed values**:
+        * `aperture`
+        * `camera`
+        * `lens`
+
+
 
 ## Examples
 
 * `{"uri": "https://raw.githubusercontent.com/KhronosGroup/glTF/main/specification/figures/gltf.png", "mimeType": "image/png"}`
 * `{"bufferView": 2, "fraction": 0.3, "moreFractions": [  1.1,  2.2,  3.3 ]}`
+
+
+
+
+---------------------------------------
+<a name="reference-meta"></a>
+## Metadatum
+
+A random piece of image metadata
+
+**`Metadatum` Properties**
+
+|   |Type|Description|Required|
+|---|---|---|---|
+|**key**|`string`|| &#10003; Yes|
+|**val**|`string`|| &#10003; Yes|
+
+* **Additional properties are allowed.**
+* **Type of additional properties**: `string`
+* **Property names**:
+    * **Pattern**: `^[A-Za-z_][A-Za-z0-9_]*$`
+
+* **JSON schema**: [meta.schema.json](https://www.khronos.org/wetzel/just/testing/schema/meta.schema.json)
+
+### meta.key
+
+* **Type**: `string`
+* **Required**:  &#10003; Yes
+
+### meta.val
+
+* **Type**: `string`
+* **Required**:  &#10003; Yes
+
+

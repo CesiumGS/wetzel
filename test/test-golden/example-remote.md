@@ -13,8 +13,7 @@ Example description.
 |**byteOffset**|`integer`|The offset relative to the start of the buffer in bytes.|No, default: `0`|
 |**type**|`string`|Specifies if the elements are scalars, vectors, or matrices.| &#10003; Yes|
 
-Additional properties are not allowed.
-
+* **Additional properties are not allowed.**
 * **JSON schema**: [example.schema.json](https://www.khronos.org/wetzel/just/testing/schema/example.schema.json)
 
 ### example.byteOffset

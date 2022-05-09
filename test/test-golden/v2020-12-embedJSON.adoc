@@ -9,3 +9,16 @@ include::schema/image.schema.json[]
 ----
 
 <<<
+
+
+
+
+[#schema-reference-meta]
+== JSON Schema for Metadatum
+
+[source,json]
+----
+include::schema/meta.schema.json[]
+----
+
+<<<

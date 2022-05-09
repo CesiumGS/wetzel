@@ -1,0 +1,16 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "meta.schema.json",
+    "title": "Metadatum",
+    "type": "object",
+    "description": "A random piece of image metadata",
+    "properties": {
+        "key": { "type": "string" },
+        "val": { "type": "string"}
+    },
+    "required": ["key", "val"],
+    "additionalProperties": { "type": "string" },
+    "propertyNames": {
+        "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+    }
+}

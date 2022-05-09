@@ -24,7 +24,7 @@ Example description.
 
 |===
 
-Additional properties are not allowed.
+* **Additional properties are not allowed.**
 
 === example.byteOffset
 

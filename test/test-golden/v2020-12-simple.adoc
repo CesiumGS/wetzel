@@ -37,9 +37,14 @@ Image data used to create a texture. Image **MAY** be referenced by an URI (or I
 |An array of three fractional numbers.
 |No, default: `[0.1,0.2,0.3]`
 
+|**metadata**
+|`object`
+|
+|No
+
 |===
 
-Additional properties are allowed.
+* **Additional properties are allowed.**
 
 === Image.uri
 
@@ -92,8 +97,67 @@ An array of three fractional numbers.
 ** `[1.3, 4.03, 42]`
 ** `[18, 0.1, 1.1]`
 
+=== Image.metadata
+
+* **Type**: `object`
+* **Required**: No
+* **Additional properties are allowed.**
+* **Type of each property**: `meta`
+* **Property names**:
+** **Pattern**: `^[A-Za-z_][A-Za-z0-9_]*$`
+** **Minimum Length**`: &gt;= 3`
+** **Maximum Length**`: &lt;= 10`
+** **Allowed values**:
+*** `aperture`
+*** `camera`
+*** `lens`
+
+
 
 == Examples
 
 * `{"uri": "https://raw.githubusercontent.com/KhronosGroup/glTF/main/specification/figures/gltf.png", "mimeType": "image/png"}`
 * `{"bufferView": 2, "fraction": 0.3, "moreFractions": [  1.1,  2.2,  3.3 ]}`
+
+
+
+
+'''
+[#reference-meta]
+== Metadatum
+
+A random piece of image metadata
+
+.`Metadatum` Properties
+|===
+|   |Type|Description|Required
+
+|**key**
+|`string`
+|
+| &#10003; Yes
+
+|**val**
+|`string`
+|
+| &#10003; Yes
+
+|===
+
+* **Additional properties are allowed.**
+* **Type of additional properties**: `string`
+* **Property names**:
+** **Pattern**: `^[A-Za-z_][A-Za-z0-9_]*$`
+
+
+=== meta.key
+
+* **Type**: `string`
+* **Required**:  &#10003; Yes
+
+=== meta.val
+
+* **Type**: `string`
+* **Required**:  &#10003; Yes
+
+
