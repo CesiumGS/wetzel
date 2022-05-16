@@ -16,6 +16,13 @@ Image data used to create a texture. Image **MAY** be referenced by an URI (or I
 |**fraction**|`number`|A number that **MUST** be between zero and one.|No|
 |**moreFractions**|`number` `[3]`|An array of three fractional numbers.|No, default: `[0.1,0.2,0.3]`|
 
+**`Image` Pattern Properties**
+
+|   |Type|Description|Required|
+|---|---|---|---|
+|**`/^(?:rgb\|hex\|hsl\|rgba\|hsla)Color/`**|`string`|The background color for the image|No|
+|**`/^(?:height\|width)$/`**|`string`|A dimension for the image|No|
+
 Additional properties are allowed.
 
 * **JSON schema**: [image.schema.json](https://www.khronos.org/wetzel/just/testing/schema/image.schema.json)
@@ -70,6 +77,28 @@ An array of three fractional numbers.
 * **Examples**:
     * `[1.3, 4.03, 42]`
     * `[18, 0.1, 1.1]`
+
+
+### Image.`/^(?:rgb\|hex\|hsl\|rgba\|hsla)Color/`
+
+The background color for the image
+
+* **Type**: `string`
+* **Required**: No
+* **Examples**:
+    * `"rgb(255, 99, 71)"`
+    * `"#ff6347"`
+    * `"hsl(9, 100%, 64%)"`
+
+### Image.`/^(?:height\|width)$/`
+
+A dimension for the image
+
+* **Type**: `string`
+* **Required**: No
+* **Examples**:
+    * `"10"`
+    * `"400px"`
 
 
 ## Examples
