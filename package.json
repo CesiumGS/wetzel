@@ -38,6 +38,7 @@
         "wetzel": "./bin/wetzel.js"
     },
     "scripts": {
+        "eslint": "eslint \"./**/*.js\" --cache --quiet",
         "test": "mocha",
         "test-bail": "mocha -b",
         "generate-third-party": "gulp generate-third-party"
