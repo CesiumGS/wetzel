@@ -30,7 +30,10 @@
         "minimist": "^1.2.6"
     },
     "devDependencies": {
-        "eslint": "^7.10.0",
+        "eslint": "^8.19.0",
+        "eslint-config-cesium": "^9.0.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-node": "^11.1.0",
         "gulp": "^4.0.2",
         "mocha": "^10.0.0"
     },
