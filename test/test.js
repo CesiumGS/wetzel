@@ -1,3 +1,4 @@
+'use strict';
 /* global describe, it */
 const fs = require('fs');
 const path = require('path');
@@ -37,25 +38,25 @@ describe('wetzel', function () {
         }
 
         for (let i = 0; i < numSchemas; ++i) {
-            let schema = index.schemas[i];
-            for (let option in index.options) {
+            const schema = index.schemas[i];
+            for (const option in index.options) {
                 if (index.options.hasOwnProperty(option)) {
-                    let names = option.split(',');
-                    let outputName = schema.name + '-' + names[0];
-                    let outputPathName = path.join(OUT_PREFIX, outputName);
-                    let goldenPathName = path.join(GOLDEN_PREFIX, outputName);
-                    let inputPathName = path.join(SCHEMA_PREFIX, schema.path);
-                    let ignore = schema.ignore ? ('-i "' + schema.ignore + '"') : '';
-                    let embedOutputName = schema.name + '-' + (names[1] || '');
-                    let embedOutputPathName = path.join(OUT_PREFIX, embedOutputName);
-                    let embedGoldenPathName = path.join(GOLDEN_PREFIX, embedOutputName);
+                    const names = option.split(',');
+                    const outputName = `${schema.name  }-${  names[0]}`;
+                    const outputPathName = path.join(OUT_PREFIX, outputName);
+                    const goldenPathName = path.join(GOLDEN_PREFIX, outputName);
+                    const inputPathName = path.join(SCHEMA_PREFIX, schema.path);
+                    const ignore = schema.ignore ? (`-i "${  schema.ignore  }"`) : '';
+                    const embedOutputName = `${schema.name  }-${  names[1] || ''}`;
+                    const embedOutputPathName = path.join(OUT_PREFIX, embedOutputName);
+                    const embedGoldenPathName = path.join(GOLDEN_PREFIX, embedOutputName);
 
-                    it('should generate ' + outputName, function (done) {
+                    it(`should generate ${  outputName}`, function (done) {
                         const options = index.options[option].replace('{EMBED}', embedOutputPathName);
                         const cmd = `${WETZEL_BIN} ${options} ${ignore} ${inputPathName} > ${outputPathName}`;
                         exec(cmd, (error) => {
                             if (error) {
-                                console.error('** ERROR ** ' + error);
+                                console.error(`** ERROR ** ${  error}`);
                                 done(error);
                                 return;
                             }
@@ -63,20 +64,20 @@ describe('wetzel', function () {
                         });
                     });
 
-                    it('should match golden ' + outputName, function () {
+                    it(`should match golden ${  outputName}`, function () {
                         // Main output test
-                        let outputText = fs.readFileSync(outputPathName).toString();
+                        const outputText = fs.readFileSync(outputPathName).toString();
                         assert.ok(outputText.length > 1);
-                        let goldenText = fs.readFileSync(goldenPathName).toString();
+                        const goldenText = fs.readFileSync(goldenPathName).toString();
                         assert.strictEqual(outputText, goldenText);
                     });
 
                     if (names.length > 1) {
                         // Embed test
-                        it('should match embedded golden ' + embedOutputName, function () {
-                            let embedOutputText = fs.readFileSync(embedOutputPathName).toString();
+                        it(`should match embedded golden ${  embedOutputName}`, function () {
+                            const embedOutputText = fs.readFileSync(embedOutputPathName).toString();
                             assert.ok(embedOutputText.length > 1);
-                            let embedGoldenText = fs.readFileSync(embedGoldenPathName).toString();
+                            const embedGoldenText = fs.readFileSync(embedGoldenPathName).toString();
                             assert.strictEqual(embedOutputText, embedGoldenText);
                         });
                     }
