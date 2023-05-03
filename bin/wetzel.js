@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 "use strict";
-const fs = require("fs");
 const path = require("path");
 const minimist = require("minimist");
 const defined = require("../lib/defined");
 const defaultValue = require("../lib/defaultValue");
 const enums = require("../lib/enums");
 const SchemaRepository = require("../lib/SchemaRepository");
-const MarkdownGenerator = require("../lib/MarkdownGenerator");
+const TypeScriptGenerator = require("../lib/TypeScriptGenerator");
 
 const parsedArguments = minimist(process.argv.slice(2));
 
@@ -167,33 +166,11 @@ function run() {
     schemaRepository.addRootSchema(options.inputFilePaths[i]);
   }
 
-  // Create the markdown generator
-  const markdownGenerator = new MarkdownGenerator(schemaRepository, options);
+  // Create the generator
+  const typeScriptGenerator = new TypeScriptGenerator(schemaRepository, options);
 
-  // Create the JSON Schema reference markdown, if requested,
-  // which contains the actual JSON schema files
-  let embedMode = enums.embedMode.none;
-  if (defined(options.embedOutputFile)) {
-    if (options.inlineEmbeddedOutput) {
-      embedMode = enums.embedMode.inlineFileContents;
-    } else {
-      embedMode = enums.embedMode.writeIncludeStatements;
-    }
-    const schemaReferenceMarkdown = 
-      markdownGenerator.generateFullJsonSchemaReferenceMarkdown(options.headerLevel, embedMode);
-    fs.writeFileSync(options.embedOutputFile, schemaReferenceMarkdown);
-  }
-
-  // Generate the main property reference, including all property 
-  // references for the types that have been found from the input
-  // file paths
-  let propertyReferenceMarkdown = '';
-  if (options.writeTOC) {
-    propertyReferenceMarkdown += markdownGenerator.generateTableOfContentsMarkdown(options.headerLevel);
-  }
-  propertyReferenceMarkdown += 
-    markdownGenerator.generateFullPropertyReferenceMarkdown(options.headerLevel, embedMode);
-  fs.writeFileSync(options.outputFilePath, propertyReferenceMarkdown);
+  // Generate the typescript files
+  typeScriptGenerator.generateTypeScriptFiles(options.outputFilePath);
 
 }
 
