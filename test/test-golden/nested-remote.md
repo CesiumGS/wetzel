@@ -72,7 +72,7 @@ Dictionary object with extension-specific objects.
 
 * **Type**: [`extension`](#reference-extension)
 * **Required**: No
-* **Type of each property**: Extension
+* **Type of each property**: `object`
 
 ### bufferView.extras
 
@@ -177,7 +177,7 @@ Dictionary object with extension-specific objects.
 
 * **Type**: [`extension`](#reference-extension)
 * **Required**: No
-* **Type of each property**: Extension
+* **Type of each property**: `object`
 
 ### image.extras
 
@@ -225,7 +225,7 @@ Dictionary object with extension-specific objects.
 
 * **Type**: [`extension`](#reference-extension)
 * **Required**: No
-* **Type of each property**: Extension
+* **Type of each property**: `object`
 
 ### material.extras
 
@@ -330,7 +330,7 @@ Dictionary object with extension-specific objects.
 
 * **Type**: [`extension`](#reference-extension)
 * **Required**: No
-* **Type of each property**: Extension
+* **Type of each property**: `object`
 
 ### material.pbrMetallicRoughness.extras
 
@@ -407,7 +407,7 @@ Dictionary object with extension-specific objects.
 
 * **Type**: [`extension`](#reference-extension)
 * **Required**: No
-* **Type of each property**: Extension
+* **Type of each property**: `object`
 
 ### nestedTest.extras
 
