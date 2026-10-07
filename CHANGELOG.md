@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.3.0 - 2026-10-07
+
+* Added several fixes for glTF specs. [#84](https://github.com/CesiumGS/wetzel/pull/84), [#88](https://github.com/CesiumGS/wetzel/pull/84), [#91](https://github.com/CesiumGS/wetzel/pull/84)
+
 ### 0.2.3 - 2021-10-26
 
 * Added support for "Examples". [#63](https://github.com/CesiumGS/wetzel/pull/63)
