@@ -1,49 +1,49 @@
 {
-    "name": "wetzel",
-    "version": "0.2.3",
-    "description": "Generate Markdown or AsciiDoctor documentation from JSON Schema",
-    "license": "Apache-2.0",
-    "author": {
-        "name": "Patrick Cozzi, Ed Mackey, Howard Wolosky, and other contributors",
-        "url": "https://twitter.com/pjcozzi"
-    },
-    "main": "index.js",
-    "keywords": [
-        "json schema",
-        "markdown",
-        "asciidoctor"
-    ],
-    "homepage": "https://github.com/CesiumGS/wetzel",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/CesiumGS/wetzel.git"
-    },
-    "bugs": {
-        "url": "https://github.com/CesiumGS/wetzel/issues"
-    },
-    "directories": {
-        "bin": "./bin",
-        "lib": "./lib"
-    },
-    "dependencies": {
-        "jsonpointer": "^5.0.0",
-        "minimist": "^1.2.6"
-    },
-    "devDependencies": {
-        "eslint": "^8.19.0",
-        "eslint-config-cesium": "^9.0.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-node": "^11.1.0",
-        "gulp": "^4.0.2",
-        "mocha": "^10.0.0"
-    },
-    "bin": {
-        "wetzel": "./bin/wetzel.js"
-    },
-    "scripts": {
-        "eslint": "eslint \"./**/*.js\" --cache --quiet",
-        "test": "mocha",
-        "test-bail": "mocha -b",
-        "generate-third-party": "gulp generate-third-party"
-    }
+  "name": "wetzel",
+  "version": "0.3.0-beta01",
+  "description": "Generate Markdown or AsciiDoctor documentation from JSON Schema",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Wetzel Community & Contributors",
+    "url": "https://github.com/CesiumGS/wetzel/graphs/contributors"
+  },
+  "main": "index.js",
+  "keywords": [
+    "json schema",
+    "markdown",
+    "asciidoctor"
+  ],
+  "homepage": "https://github.com/CesiumGS/wetzel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CesiumGS/wetzel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CesiumGS/wetzel/issues"
+  },
+  "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+  },
+  "dependencies": {
+    "jsonpointer": "^5.0.0",
+    "minimist": "^1.2.6"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-cesium": "^9.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "gulp": "^4.0.2",
+    "mocha": "^10.0.0"
+  },
+  "bin": {
+    "wetzel": "./bin/wetzel.js"
+  },
+  "scripts": {
+    "eslint": "eslint \"./**/*.js\" --cache --quiet",
+    "test": "mocha",
+    "test-bail": "mocha -b",
+    "generate-third-party": "gulp generate-third-party"
+  }
 }
